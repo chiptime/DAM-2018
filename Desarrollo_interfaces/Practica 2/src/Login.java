@@ -49,7 +49,7 @@ public class Login {
 	 */
 	private void initialize() {
 		frmlogin = new JFrame();
-		frmlogin.setBounds(100, 100, 290, 255);
+		frmlogin.setBounds(100, 100, 311, 271);
 		frmlogin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JLabel lblLogin = new JLabel("Login");
