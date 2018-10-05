@@ -43,7 +43,7 @@ main (int argc, char *argv[])
         switch(next_option)
         {
             case 'a':
-                fprintf(stdout," Has pedido un Ayuda.\n");
+                fprintf(stdout," Has pedido Ayuda.\n");
                 print (stdout, 0);
                 break;
             case 'f':
