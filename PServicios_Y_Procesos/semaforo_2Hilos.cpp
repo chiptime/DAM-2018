@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
+sem_t sem;
 
 void *say(void *parameter )
 {
@@ -14,12 +15,21 @@ void *say(void *parameter )
 	return NULL;
 }
 
+void inicializar()
+{
+	sem_wait(&sem);
+
+	sem_post(&sem);
+
+}
+
 int 
 main () 
 {
 	pthread_t thread1;
 	pthread_t thread2;
 
+	sem_init(&sem,0,0);
 	pthread_create (&thread1, NULL, &say,(void *) "Hilo 1");
 	pthread_create (&thread2, NULL, &say, (void *)"Hilo 2");
 
