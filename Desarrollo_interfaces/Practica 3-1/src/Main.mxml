@@ -6,8 +6,7 @@
 			   width="954" minWidth="955" minHeight="600">
 	<fx:Script>
 		<![CDATA[
-			public var usuario:String;
-			public var contrasenia:String;
+			
 
 
 			public var list:ArrayList; 
