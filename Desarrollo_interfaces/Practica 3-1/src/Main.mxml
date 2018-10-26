@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   currentState="initial"
+			   width="954" minWidth="955" minHeight="600">
+	<fx:Script>
+		<![CDATA[
+			public var usuario:String;
+			public var contrasenia:String;
+
+
+			public var list:ArrayList; 
+			public function initData():void { 
+				list.addItem(listaPizza);
+				list.addItem(listaToppings);
+				list.addItem(listaBase);
+			}
+			
+			protected function btn3_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+					
+					textInput1.text = list.getItemAt(combo.selectedIndex).toString(); 
+						 
+					
+									
+			}
+			
+
+
+			[Bindable]
+			private var pinPending:Boolean = false;
+			
+			[Bindable]
+			private var statusPending:Boolean = false;
+			
+			[Bindable]
+			private var screenName:String;
+			
+
+			protected function button1_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				
+				currentState = "authenticated";
+			}
+			
+		]]>
+	</fx:Script>
+	
+	
+
+	<fx:Declarations>
+		<s:RadioButtonGroup id="radiogroup"/>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->		
+		
+		
+			<s:ArrayList id="listaPizza">
+				<fx:String>Margarita</fx:String>
+				<fx:String>Hawaiana</fx:String>
+				<fx:String>Cuatro quesos</fx:String>
+				<fx:String>Carbonara</fx:String>
+				<fx:String>Barbacoa</fx:String>
+				<fx:String>Steak House</fx:String>
+				<fx:String>Pepperoni</fx:String>
+				<fx:String>Pollo y Barbacoa</fx:String>
+				<fx:String>Calzone</fx:String>
+			</s:ArrayList>
+			
+			<s:ArrayList id="listaToppings">
+				<fx:String>Queso de cabra</fx:String>
+				<fx:String>Cuatro quesos</fx:String>
+				<fx:String>Bacon</fx:String>
+				<fx:String>Jamon</fx:String>
+				<fx:String>Piña</fx:String>
+				<fx:String>Champiñones</fx:String>
+				<fx:String>Peperoni</fx:String>
+			</s:ArrayList>
+			
+			<s:ArrayList id="listaBase">
+				<fx:String>Carbonara</fx:String>
+				<fx:String>Tomate</fx:String>
+				<fx:String>Barbacoa</fx:String>			
+			</s:ArrayList>
+			
+			<s:ArrayList id="comboBox">
+				<fx:String>Pizza</fx:String>
+				<fx:String>Toppings</fx:String>
+				<fx:String>Base</fx:String>			
+			</s:ArrayList>
+		
+		
+		<!-- Lista para comboBox -->
+
+	</fx:Declarations>
+
+	<s:states>
+		<s:State name="initial" />
+		<s:State name="registrar" />
+		<s:State name="unauthenticated" />
+		<s:State name="authenticated" />
+	</s:states>
+	
+	<s:Group includeIn="authenticated"
+			 horizontalCenter="0"
+			 verticalCenter="0">
+	
+	<s:List id="pizza" x="0" y="171" width="228" height="202" dataProvider="{listaPizza}"></s:List>
+	<s:List id="base" x="227" y="171" width="237.5" height="102" dataProvider="{listaBase}"></s:List>
+	<s:List id="toppings" x="227" y="271" width="237.5" height="102" dataProvider="{listaToppings}"></s:List>
+	
+	<s:TextInput id="textInput1" x="476" y="610"/>
+	<s:TextInput id="textInput2" text=" selectedItem: {combo.selectedItem } " x="294" y="578"/>
+	<s:TextInput id="filtro" x="0" y="150" width="228" enabled="true"
+				 prompt="type filter text..."/>
+	<s:Button id="btn1" x="714" y="626" width="240" height="43" label="Terminar compra"
+			  chromeColor="#FAFAFA" color="#000000"
+			  focusColor="#7B10E8" fontSize="16"/>
+	<s:Button id="btn2" x="816" y="67" width="83" height="26" label="Menu" enabled="true"/>
+	
+	<s:Button id="btn3" x="379" y="151" width="85" height="22" label="Search"
+			  click="btn3_clickHandler(event)"/>
+	<s:CheckBox id="chck1" x="570" y="59" label="CheckBox1"/>
+	<s:CheckBox id="chck2" x="570" y="85" label="CheckBox2"/>
+	<s:Image x="0" y="0" width="217" height="150" source="assets/logo_telepizza.jpg"/>
+	<s:VGroup x="358" y="70" width="125" height="73">
+		<s:RadioButton label="Pagar con Paypal" groupName="radiogroup"/>
+		
+		<s:RadioButton label="Pagar con Tarjeta" groupName="radiogroup"/>
+		<s:RadioButton label="Pagar en efectivo" groupName="radiogroup"/>
+	</s:VGroup>
+	<s:ComboBox id="combo" x="227" y="150" width="152" height="22" dataProvider="{comboBox}" />
+	
+	
+	<s:TextArea id="area" x="0" y="521" height="149"/>
+	<mx:DateField id="calendario" x="446" y="9">		
+	</mx:DateField>
+
+		
+	</s:Group>
+<!--
+	<s:Group includeIn="registrar"
+			 horizontalCenter="0"
+			 verticalCenter="0">
+		<s:Label text="hola" />
+	</s:Group>	-->
+	
+	<s:Group includeIn="initial"
+			 horizontalCenter="0"
+			 verticalCenter="0">
+		
+		<s:TextInput includeIn="initial" x="308" y="172" width="260"/>
+		<s:TextInput includeIn="initial" x="308" y="237" width="260"/>
+		<s:Button includeIn="initial" x="307" y="291" width="261" label="Iniciar sesión"
+				  chromeColor="#F6B144" click="button1_clickHandler(event)"/>
+		<s:Button includeIn="initial" x="307" y="385" width="261" label="Crea tu cuenta"
+				  chromeColor="#E7E0E0"/>
+		<s:Label includeIn="initial" x="306" y="108" fontSize="27" fontWeight="bold"
+				 text="Iniciar Sesión"/>
+		<s:Label includeIn="initial" x="308" y="152" fontWeight="bold"
+				 text="Dirección de e-mail o número de teléfono móvil"/>
+		<s:Label includeIn="initial" x="308" y="217" fontWeight="bold" text="Contraseña"/>
+		<s:Label includeIn="initial" x="403" y="217" color="#1177CE" text="¿Has olvidado la contraseña?"/>
+		<s:CheckBox includeIn="initial" x="307" y="320" label="Recuérdame."/>
+		<s:Label includeIn="initial" x="402" y="365" color="#5A5555" text="¿Eres nuevo?"/>
+		
+	</s:Group>
+	
+	
+
+
+	
+</s:Application>

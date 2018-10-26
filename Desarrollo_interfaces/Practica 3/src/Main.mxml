@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600">
+	
+	<fx:Script>
+		<![CDATA[
+			protected function btn1_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				
+			}
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<s:RadioButtonGroup id="radiogroup"/>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->		
+		
+		<!-- Lista para comboBox -->
+		<s:ArrayList id="comboData">
+			<fx:String>Small</fx:String>
+			<fx:String>Medium</fx:String>
+			<fx:String>Large</fx:String>
+		</s:ArrayList>
+	</fx:Declarations>
+	<s:TextInput id="textInput1" text="selectedIndex: {combo.selectedIndex}" x="587" y="10"/>
+	<s:TextInput id="textInput2" text=" selectedItem: {combo.selectedItem } " x="587" y="55"/>
+	<s:TextInput id="textInput3" x="587" y="104"/>
+	<s:Button id="btn1" x="289" y="381" width="240" height="43" label="Finish this workout"
+			  chromeColor="#7B10E8" click="btn1_clickHandler(event)" color="#FFFFFF"
+			  focusColor="#7B10E8" fontSize="16"/>
+	<s:Button id="btn2" x="587" y="193" label="Button2"/>
+	<s:Button id="btn3" x="587" y="238" label="Button3"/>
+	<s:CheckBox id="chck1" x="587" y="267" label="CheckBox1"/>
+	<s:CheckBox id="chck2" x="587" y="297" label="CheckBox2"/>
+	<s:VGroup x="587" y="350">
+		<s:RadioButton label="RadioBtn1" groupName="radiogroup"/>
+		<s:RadioButton label="RadioBtn2" groupName="radiogroup"/>
+		<s:RadioButton label="RadioBtn3" groupName="radiogroup"/>
+	</s:VGroup>
+	<s:ComboBox id="combo" x="404" y="10" dataProvider="{comboData}"/>
+	
+	
+	<s:TextArea id="area" x="315" y="104"/>
+	<mx:DateField id="calendario" x="455" y="276"/>
+	<s:Image x="315" y="324"/>
+</s:Application>
