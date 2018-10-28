@@ -2,172 +2,398 @@
 <s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
 			   xmlns:s="library://ns.adobe.com/flex/spark"
 			   xmlns:mx="library://ns.adobe.com/flex/mx"
-			   currentState="initial"
-			   width="954" minWidth="955" minHeight="600">
+			   width="954" minWidth="955" minHeight="600" currentState="initial"
+			   height.initial="628">
 	<fx:Script>
 		<![CDATA[
+			import mx.controls.Alert;
+			import mx.skins.halo.WindowBackground;
 			
-
-
+			
+			
 			public var list:ArrayList; 
 			public function initData():void { 
 				list.addItem(listaPizza);
 				list.addItem(listaToppings);
 				list.addItem(listaBase);
 			}
+			public var usuario:Usuario = new Usuario("test", "test", "test");
+			
+			//public var usuario:Usuario;
+			public var lasPizzas:String = "";
+			public var count:int = 0;
+			
+			
 			
 			protected function btn3_clickHandler(event:MouseEvent):void
 			{
-				// TODO Auto-generated method stub
-					
-					textInput1.text = list.getItemAt(combo.selectedIndex).toString(); 
-						 
-					
-									
+				// TODO Auto-generated method stub			
+				Alert.show("Lo sentimos esta en construcción", "Error", mx.controls.Alert.OK);
+		
 			}
 			
-
-
-			[Bindable]
-			private var pinPending:Boolean = false;
-			
-			[Bindable]
-			private var statusPending:Boolean = false;
-			
-			[Bindable]
-			private var screenName:String;
-			
-
+			protected function label1_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				currentState = "forgottenPassword";
+			}
 			protected function button1_clickHandler(event:MouseEvent):void
+			{
+				
+				// TODO Auto-generated method stub
+				
+
+				
+				areaPruebas.text += "\n\n" + "Usuario: " + usuario.getCorreo() + "\nContraseña: "+ usuario.getContrasenia();
+				if(usuario.getCorreo() == loginUser.text && usuario.getContrasenia() == loginPass.text){					
+					if(userPassErr.visible){
+						userPassErr.visible = false;
+						areaPruebas.visible = false;
+					}
+					loginUser.setStyle("contentBackgroundAlpha", "1");
+					loginUser.setStyle("contentBackgroundColor", "white");
+					loginUser.setStyle("borderColor", "#000000");
+					loginPass.setStyle("contentBackgroundAlpha", "1");
+					loginPass.setStyle("contentBackgroundColor", "white");
+					loginPass.setStyle("borderColor", "#000000");
+					currentState = "authenticated";					
+				}
+				else{
+					userPassErr.visible = true;
+					loginUser.setStyle("contentBackgroundAlpha", "0.3");
+					loginUser.setStyle("contentBackgroundColor", "#e92e2e");
+					loginUser.setStyle("borderColor", "#a42626");
+					loginPass.setStyle("contentBackgroundAlpha", "0.3");
+					loginPass.setStyle("contentBackgroundColor", "#e92e2e");
+					loginPass.setStyle("borderColor", "#a42626");
+					areaPruebas.visible = true;
+				}
+			}
+			
+			protected function button2_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				currentState = "register";
+			}
+			
+			protected function btn2_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				currentState = "initial";
+			}
+			
+			protected function button3_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				Alert.show("Lo sentimos esta en construcción", "Error", mx.controls.Alert.OK);
+				currentState = "initial";
+			}
+			
+			protected function button4_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				currentState = "initial";
+			}
+			
+			protected function button5_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				currentState = "initial";
+			}
+			
+			protected function button6_clickHandler(event:MouseEvent):void
 			{
 				// TODO Auto-generated method stub
 				
-				currentState = "authenticated";
+				if(txtNombreR.text || txtCorreoR.text || txtContraseniaR.text || txtRepetirContraseniaR.text != "" ){
+					if(txtContraseniaR.text == txtRepetirContraseniaR.text && txtContraseniaR.text != ""){
+						usuario = new Usuario (txtNombreR.text, txtCorreoR.text, txtContraseniaR.text);
+						if(avisoContra.visible)
+							avisoContra.visible = false;
+						txtRepetirContraseniaR.setStyle("contentBackgroundAlpha", "1");
+						txtRepetirContraseniaR.setStyle("contentBackgroundColor", "white");
+						txtRepetirContraseniaR.setStyle("borderColor", "#000000");
+						txtContraseniaR.setStyle("contentBackgroundAlpha", "1");
+						txtContraseniaR.setStyle("contentBackgroundColor", "white");
+						txtContraseniaR.setStyle("borderColor", "#000000");
+					}
+					else{
+						avisoContra.visible = true;
+						txtRepetirContraseniaR.setStyle("contentBackgroundAlpha", "0.3");
+						txtRepetirContraseniaR.setStyle("contentBackgroundColor", "#e92e2e");
+						txtRepetirContraseniaR.setStyle("borderColor", "#a42626");
+						txtContraseniaR.setStyle("contentBackgroundAlpha", "0.3");
+						txtContraseniaR.setStyle("contentBackgroundColor", "#e92e2e");
+						txtContraseniaR.setStyle("borderColor", "#a42626");
+					}
+					Alert.show("Se ha creado su cuenta " + usuario.getCorreo(), "Creacion correcta", mx.controls.Alert.OK);
+					currentState = "initial";
+				}
+					else
+						Alert.show("Porfavor rellene todos los campos", "Error de login", mx.controls.Alert.OK);
+				/*if(avisoContra.visible)
+				avisoContra.visible = false;
+				else{
+				avisoContra.visible = true;
+				txtRepetirContraseniaR.setStyle("borderAlpha",0.59);
+				
+				}*/
+				//txtRepetirContraseniaR.setStyle("contentBackgroundAlpha", "0.3");
+				//txtRepetirContraseniaR.setStyle("contentBackgroundColor", "#BC3030");
+				//txtRepetirContraseniaR.setStyle("fontSize", 28);, txtRepetirContraseniaR, txtContraseniaR
+				//login.getLista().toString();
+				//areaForUser.text = "hey";
+				
+				
+				
+				
+				/*borderAlpha="0.59"
+				borderColor="#CB2A2A" contentBackgroundAlpha="0.1"
+				contentBackgroundColor="#FF0000"*/
+				//}
+				
 			}
 			
+			protected function checkbox1_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				if(chckRecuerdame.selected){
+					Alert.show("Mejor no", "Vaya no hay tiempo para terminarlo", mx.controls.Alert.OK);
+					chckRecuerdame.selected = false;
+				}
+
+			}
+			
+			protected function chck1_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				terminarCompra.enabled = chck1.selected;
+					
+			}
+			
+			protected function button7_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub				
+				count++;
+				lasPizzas += pizza.selectedItem+"\n" + base.selectedItem + "\t" + toppings.selectedItems+"\n\n" ;				
+				areaListaPizzas.text = lasPizzas;
+			}
+			
+			protected function terminarCompra_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				var metodo:String = "";
+				if(paypal.selected)
+					metodo = paypal.label;
+				else
+					if(tarjeta.selected)
+						metodo = tarjeta.label;
+					else
+						metodo = efectivo.label;
+				var fecha:String = calendario.selectedDate.date + "/" + calendario.selectedDate.month+ "/" + calendario.selectedDate.fullYear;
+				if(metodo == "" || fecha == "" || lasPizzas == "")
+					Alert.show("Primero termina la compra", "Error terminar compra", mx.controls.Alert.OK);
+				else{
+					Alert.show("Es hora de pagar...", "Terminar compra", mx.controls.Alert.OK);
+					currentState = "finish";
+				}
+				
+
+					
+				
+				factura.text = "Tu metodo de pago es: \n" + metodo + "\n\n" + "Para el dia: " + fecha +
+					"\n\n" + lasPizzas + "\n\n" + "Tendra que pagar: \t" + pagoTotal(count) + "€" ;
+				
+				
+			}
+			public function pagoTotal(count:int):Number
+			{
+				return count * 7;
+			}
+			private function closeWindow():void
+			{
+				var javascript:String = "javascript:window.close();";				
+				navigateToURL(new URLRequest(javascript), "_self");        
+			}
 		]]>
 	</fx:Script>
 	
 	
-
+	
 	<fx:Declarations>
 		<s:RadioButtonGroup id="radiogroup"/>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->		
 		
 		
-			<s:ArrayList id="listaPizza">
-				<fx:String>Margarita</fx:String>
-				<fx:String>Hawaiana</fx:String>
-				<fx:String>Cuatro quesos</fx:String>
-				<fx:String>Carbonara</fx:String>
-				<fx:String>Barbacoa</fx:String>
-				<fx:String>Steak House</fx:String>
-				<fx:String>Pepperoni</fx:String>
-				<fx:String>Pollo y Barbacoa</fx:String>
-				<fx:String>Calzone</fx:String>
-			</s:ArrayList>
-			
-			<s:ArrayList id="listaToppings">
-				<fx:String>Queso de cabra</fx:String>
-				<fx:String>Cuatro quesos</fx:String>
-				<fx:String>Bacon</fx:String>
-				<fx:String>Jamon</fx:String>
-				<fx:String>Piña</fx:String>
-				<fx:String>Champiñones</fx:String>
-				<fx:String>Peperoni</fx:String>
-			</s:ArrayList>
-			
-			<s:ArrayList id="listaBase">
-				<fx:String>Carbonara</fx:String>
-				<fx:String>Tomate</fx:String>
-				<fx:String>Barbacoa</fx:String>			
-			</s:ArrayList>
-			
-			<s:ArrayList id="comboBox">
-				<fx:String>Pizza</fx:String>
-				<fx:String>Toppings</fx:String>
-				<fx:String>Base</fx:String>			
-			</s:ArrayList>
+		<s:ArrayList id="listaPizza">
+			<fx:String>Margarita</fx:String>
+			<fx:String>Hawaiana</fx:String>
+			<fx:String>Cuatro quesos</fx:String>
+			<fx:String>Carbonara</fx:String>
+			<fx:String>Barbacoa</fx:String>
+			<fx:String>Steak House</fx:String>
+			<fx:String>Pepperoni</fx:String>
+			<fx:String>Pollo y Barbacoa</fx:String>
+			<fx:String>Calzone</fx:String>
+		</s:ArrayList>
+		
+		<s:ArrayList id="listaToppings">
+			<fx:String>Queso de cabra</fx:String>
+			<fx:String>Cuatro quesos</fx:String>
+			<fx:String>Bacon</fx:String>
+			<fx:String>Jamon</fx:String>
+			<fx:String>Piña</fx:String>
+			<fx:String>Champiñones</fx:String>
+			<fx:String>Peperoni</fx:String>
+		</s:ArrayList>
+		
+		<s:ArrayList id="listaBase">
+			<fx:String>Carbonara</fx:String>
+			<fx:String>Base Tomate</fx:String>
+			<fx:String>Barbacoa</fx:String>			
+		</s:ArrayList>
+		
+		<s:ArrayList id="comboBox">
+			<fx:String>Pizza</fx:String>
+			<fx:String>Toppings</fx:String>
+			<fx:String>Base</fx:String>			
+		</s:ArrayList>
 		
 		
 		<!-- Lista para comboBox -->
-
+		
 	</fx:Declarations>
-
+	
 	<s:states>
 		<s:State name="initial" />
-		<s:State name="registrar" />
-		<s:State name="unauthenticated" />
+		<s:State name="register" />
+		<s:State name="forgottenPassword" />
 		<s:State name="authenticated" />
+		<s:State name="finish" />
 	</s:states>
 	
-	<s:Group includeIn="authenticated"
-			 horizontalCenter="0"
-			 verticalCenter="0">
-	
-	<s:List id="pizza" x="0" y="171" width="228" height="202" dataProvider="{listaPizza}"></s:List>
-	<s:List id="base" x="227" y="171" width="237.5" height="102" dataProvider="{listaBase}"></s:List>
-	<s:List id="toppings" x="227" y="271" width="237.5" height="102" dataProvider="{listaToppings}"></s:List>
-	
-	<s:TextInput id="textInput1" x="476" y="610"/>
-	<s:TextInput id="textInput2" text=" selectedItem: {combo.selectedItem } " x="294" y="578"/>
-	<s:TextInput id="filtro" x="0" y="150" width="228" enabled="true"
-				 prompt="type filter text..."/>
-	<s:Button id="btn1" x="714" y="626" width="240" height="43" label="Terminar compra"
-			  chromeColor="#FAFAFA" color="#000000"
-			  focusColor="#7B10E8" fontSize="16"/>
-	<s:Button id="btn2" x="816" y="67" width="83" height="26" label="Menu" enabled="true"/>
-	
-	<s:Button id="btn3" x="379" y="151" width="85" height="22" label="Search"
-			  click="btn3_clickHandler(event)"/>
-	<s:CheckBox id="chck1" x="570" y="59" label="CheckBox1"/>
-	<s:CheckBox id="chck2" x="570" y="85" label="CheckBox2"/>
-	<s:Image x="0" y="0" width="217" height="150" source="assets/logo_telepizza.jpg"/>
-	<s:VGroup x="358" y="70" width="125" height="73">
-		<s:RadioButton label="Pagar con Paypal" groupName="radiogroup"/>
+	<s:Group includeIn="initial" width="954" height="628" horizontalCenter="0" verticalCenter="0">
 		
-		<s:RadioButton label="Pagar con Tarjeta" groupName="radiogroup"/>
-		<s:RadioButton label="Pagar en efectivo" groupName="radiogroup"/>
-	</s:VGroup>
-	<s:ComboBox id="combo" x="227" y="150" width="152" height="22" dataProvider="{comboBox}" />
-	
-	
-	<s:TextArea id="area" x="0" y="521" height="149"/>
-	<mx:DateField id="calendario" x="446" y="9">		
-	</mx:DateField>
-
-		
-	</s:Group>
-<!--
-	<s:Group includeIn="registrar"
-			 horizontalCenter="0"
-			 verticalCenter="0">
-		<s:Label text="hola" />
-	</s:Group>	-->
-	
-	<s:Group includeIn="initial"
-			 horizontalCenter="0"
-			 verticalCenter="0">
-		
-		<s:TextInput includeIn="initial" x="308" y="172" width="260"/>
-		<s:TextInput includeIn="initial" x="308" y="237" width="260"/>
+		<s:TextInput id="loginUser" includeIn="initial" x="308" y="172" width="260"/>
+		<s:TextInput id="loginPass" includeIn="initial" x="308" y="237" width="260"/>
 		<s:Button includeIn="initial" x="307" y="291" width="261" label="Iniciar sesión"
 				  chromeColor="#F6B144" click="button1_clickHandler(event)"/>
 		<s:Button includeIn="initial" x="307" y="385" width="261" label="Crea tu cuenta"
-				  chromeColor="#E7E0E0"/>
+				  chromeColor="#E7E0E0" click="button2_clickHandler(event)"/>
 		<s:Label includeIn="initial" x="306" y="108" fontSize="27" fontWeight="bold"
 				 text="Iniciar Sesión"/>
 		<s:Label includeIn="initial" x="308" y="152" fontWeight="bold"
 				 text="Dirección de e-mail o número de teléfono móvil"/>
 		<s:Label includeIn="initial" x="308" y="217" fontWeight="bold" text="Contraseña"/>
-		<s:Label includeIn="initial" x="403" y="217" color="#1177CE" text="¿Has olvidado la contraseña?"/>
-		<s:CheckBox includeIn="initial" x="307" y="320" label="Recuérdame."/>
+		<s:Label includeIn="initial" x="403" y="217" click="label1_clickHandler(event)"
+				 color="#1177CE" text="¿Has olvidado la contraseña?"/>
+		<s:CheckBox id="chckRecuerdame" includeIn="initial" x="307" y="320" label="Recuérdame."
+					click="checkbox1_clickHandler(event)"/>
 		<s:Label includeIn="initial" x="402" y="365" color="#5A5555" text="¿Eres nuevo?"/>
+		<s:Label id="userPassErr" visible="false" x="308" y="267" color="#B32222"
+				 text="El usuario o la contraseña son incorrectas"/>
+		<s:Label id="areaPruebas" visible="false" x="38" y="56" width="197" height="121"
+				 text="Quizas esto te ayude..."/>
 		
 	</s:Group>
 	
 	
-
-
+	<s:Group includeIn="register" width="955" height="600" horizontalCenter="0" verticalCenter="0">
+		
+		
+		<s:Label includeIn="register" x="348" y="130" fontSize="12" fontWeight="bold" text="Nombre"/>
+		<s:TextInput id="txtNombreR" includeIn="register" x="348" y="150" width="260"/>
+		<s:Label includeIn="register" x="348" y="201" fontWeight="bold" text="Correo electrónico"/>
+		<s:TextInput id="txtCorreoR" includeIn="register" x="348" y="223" width="260"/>
+		<s:Label includeIn="register" x="348" y="278" fontWeight="bold" text="Contraseña"/>
+		<s:TextInput id="txtContraseniaR" includeIn="register" x="348" y="298" width="260"
+					 borderAlpha="0.59" borderColor="#000000" contentBackgroundAlpha="1.0"
+					 contentBackgroundColor="#FDFDFD" prompt="Al menos 6 caracteres"/>
+		<s:TextInput id="txtRepetirContraseniaR" includeIn="register" x="348" y="371" width="260"
+					 borderColor="#000000"/>
+		<s:Label includeIn="register" x="348" y="350" fontWeight="bold"
+				 text="Confirma tu contraseña"/>
+		<s:Button includeIn="register" x="348" y="425" width="260" label="Crea tu cuenta"
+				  chromeColor="#F6B144" click="button6_clickHandler(event)"/>
+		<s:Label x="348" y="92" fontSize="27" fontWeight="bold" text="Crear Cuenta"/>
+		<s:Button id="cancelarCrearCuenta" x="348" y="482" width="260" label="Cancelar"
+				  click="button4_clickHandler(event)"/>
+		<s:Label id="avisoContra" visible="false" x="348" y="401" color="#B32222" fontWeight="bold"
+				 text="! Las contraseñas no coinciden"/>
+		
+		<!--
+		<s:TextInput includeIn="register" x="348" y="298" width="260" borderAlpha="0.59"
+		borderColor="#CB2A2A" contentBackgroundAlpha="0.1"
+		contentBackgroundColor="#FF0000" prompt="Al menos 6 caracteres"/>-->
+		
+		
+	</s:Group>
+	
+	
+	
+	<s:Group includeIn="authenticated"
+			 horizontalCenter="0"
+			 verticalCenter="0">
+		
+		<s:List id="pizza" x="0" y="220" width="228" height="102" dataProvider="{listaPizza}"></s:List>
+		<s:List id="base" x="236" y="220" width="237.5" height="102" dataProvider="{listaBase}"
+				enabled="true"></s:List>
+		<s:List id="toppings" x="482" y="220" width="237.5" height="102"
+				allowMultipleSelection="true" dataProvider="{listaToppings}" enabled="true"></s:List>
+		<s:TextInput id="filtro" x="0" y="142" width="228" enabled="true"
+					 prompt="type filter text..."/>
+		<s:Button id="terminarCompra" x="483" y="530" width="240" height="43" label="Terminar compra"
+				  chromeColor="#FAFAFA" click="terminarCompra_clickHandler(event)" color="#000000"
+				  enabled="false" focusColor="#7B10E8" fontSize="16"/>
+		<s:Button id="volverMenu" x="603" y="36" width="112" height="26" label="Volver al menu"
+				  click="btn2_clickHandler(event)" enabled="true"/>
+		
+		<s:Button id="search" x="379" y="143" width="85" height="22" label="Search"
+				  click="btn3_clickHandler(event)"/>
+		<s:CheckBox id="chck1" x="14" y="545"
+					label="Acepta que &quot;Telepizza&quot; no tiene culpa de cualquier tipo de problemas intestinales "
+					click="chck1_clickHandler(event)"/>
+		<s:Image x="0" y="-8" width="217" height="150" source="assets/logo_telepizza.jpg"/>
+		<s:VGroup id="metodoPago" x="591" y="335" width="125" height="73">
+			<s:RadioButton id="paypal" label="Pagar con Paypal" groupName="radiogroup"/>
+			
+			<s:RadioButton id="tarjeta" label="Pagar con Tarjeta" groupName="radiogroup"/>
+			<s:RadioButton id="efectivo" label="Pagar en efectivo" groupName="radiogroup"/>
+		</s:VGroup>
+		<s:ComboBox id="combo" x="227" y="142" width="152" height="22" dataProvider="{comboBox}" />
+		<mx:DateField id="calendario" x="587" y="416" width="125">		
+		</mx:DateField>
+		<s:Label x="47" y="195" fontSize="18" fontWeight="bold" text="Pizzas"/>
+		<s:Label x="573" y="195" fontSize="18" fontWeight="bold" text="Toppings"/>
+		<s:Label x="335" y="195" fontSize="18" fontWeight="bold" text="Base"/>
+		<s:TextArea id="areaListaPizzas" x="6" y="358" width="445" height="168" editable="false"
+					text="&quot;Tus Pizzas son: \n&quot;"/>
+		<s:Button x="603" y="144" width="110" label="Agregar pizza"
+				  click="button7_clickHandler(event)"/>
+		<s:Label x="10" y="330" fontSize="18" fontWeight="bold" text="Lista de Pizzas Pedidas"/>
+		
+		
+	</s:Group>
+	<s:Label includeIn="forgottenPassword" x="352" y="141" fontSize="27" fontWeight="bold"
+			 text="Recuperar Contraseña"/>
+	<s:Label includeIn="forgottenPassword" x="352" y="197" fontWeight="bold"
+			 text="E-mail o número de móvil"/>
+	<s:Button includeIn="forgottenPassword" x="352" y="257" width="295" label="Continuar"
+			  chromeColor="#F6B144" click="button3_clickHandler(event)"/>
+	<s:TextInput includeIn="forgottenPassword" x="352" y="217" width="295"/>
+	<s:Button includeIn="forgottenPassword" x="352" y="300" width="295" label="Cancelar"
+			  click="button5_clickHandler(event)"/>
+	
+	
+	<s:Group includeIn="finish" width="954" height="628" horizontalCenter="0" verticalCenter="0">
+		<s:Image x="296" y="29" width="363" height="152" source="assets/logo_telepizza(1).jpg"/>
+		<s:TextArea id="factura" x="222" y="190" width="494" height="373" editable="false"/>
+		<s:Button id="salir" x="432" y="571" label="Salir" click="closeWindow()"/>
+		
+	</s:Group>
+		
+	
+	
+	
 	
 </s:Application>

@@ -2,25 +2,35 @@ package
 {
 	public class Usuario
 	{
-		private var usuario:String;
+		private var correo:String;
 		private var contrasenia:String;
+		private var nombre:String;
 		
-		public function Usuario(usuario, contrasenia)
+		public function Usuario(nombre:String, correo:String, contrasenia:String)
 		{
-			this.usuario = usuario;
+			this.nombre = nombre;
+			this.correo = correo;
 			this.contrasenia = contrasenia;
 		}		
-		public function getUser(){
-			return usuario;
+		public function getCorreo():String
+		{
+			return correo;
 		}
-		public function getContrasenia(){
+		public function getContrasenia():String
+		{
 			return contrasenia;
 		}
-		public function setUser(String contrasenia){
-			this.usuario = usuario;
+		public function setCorreo(correo:String):void
+		{
+			this.correo = correo;
 		}
-		public function setContrasenia(String contrasenia){
+		public function setContrasenia(contrasenia:String):void 
+		{
 			this.contrasenia = contrasenia;
+		}
+		public function setNombre(nombre:String):void
+		{
+			this.nombre = nombre;
 		}
 		
 	}

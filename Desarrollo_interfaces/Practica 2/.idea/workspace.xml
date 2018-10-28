@@ -2,7 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d1c3be5-2868-4d20-a238-fcfc5d8ad860" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Acceso-a-BBDD/CrearCarpetasArchivos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Acceso-a-BBDD/CrearCarpetasArchivos/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica 1/bin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica 1/bin/Pizza.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica 1/bin/Pizza.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica 1/bin/Practica$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica 1/bin/Practica$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica 1/bin/Practica$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica 1/bin/Practica$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica 1/bin/Practica$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica 1/bin/Practica$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica 1/bin/Practica$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica 1/bin/Practica$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica 1/bin/Practica.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica 1/bin/Practica.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica 3-1/.actionScriptProperties" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica 3-1/.actionScriptProperties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica 3-1/.flexProperties" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica 3-1/.flexProperties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica 3-1/bin-debug/Main.swf" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica 3-1/bin-debug/Main.swf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica 3-1/src/Login.as" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica 3-1/src/Login.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica 3-1/src/Main.mxml" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica 3-1/src/Main.mxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica 3-1/src/Usuario.as" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica 3-1/src/Usuario.as" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica Opcional/bin/Hija$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica Opcional/bin/Hija$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica Opcional/bin/Hija.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica Opcional/bin/Hija.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica Opcional/bin/Nieta$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica Opcional/bin/Nieta.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica Opcional/bin/Nieta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica Opcional/bin/framePrincipal$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica Opcional/bin/framePrincipal$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica Opcional/bin/framePrincipal$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica Opcional/bin/framePrincipal.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica Opcional/bin/framePrincipal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica_2/bin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica_2/bin/Conectado$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica_2/bin/Conectado.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica_2/bin/Conectado.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica_2/bin/Practica_2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica_2/bin/Practica_2$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica_2/bin/Practica_2$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica_2/bin/Practica_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica_2/bin/Practica_2.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,27 +47,35 @@
     <session id="224996247">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="2" />
+          <entry key="java" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="2" />
+          <entry key="JAVA" value="3" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/URLReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-45" />
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -57,15 +98,20 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Course" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Practica 2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Practica 2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Practica 2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Practica 2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -108,16 +154,17 @@
       <workItem from="1538516405506" duration="51000" />
       <workItem from="1540061518819" duration="462000" />
       <workItem from="1540232833023" duration="952000" />
+      <workItem from="1540587652812" duration="16000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1465000" />
+    <option name="totallyTimeSpent" value="1481000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25809062" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26213592" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -159,6 +206,11 @@
         <state relative-caret-position="-1691">
           <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/URLReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45" />
       </provider>
     </entry>
   </component>
