@@ -1,5 +1,6 @@
 <odoo>
     <data>
+        <!-- https://stackoverflow.com/questions/50851128/odoo-9-how-to-append-custom-view-template-into-existing-views -->
         <template id="listing">
             <ul>
                 <li t-foreach="objects" t-as="object">
