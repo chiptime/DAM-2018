@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600"
+			   >
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			//initialize="init();"
+			import mx.collections.ArrayCollection;
+			import mx.controls.DataGrid;
+			import mx.controls.dataGridClasses.DataGridColumn;
+			
+			protected var dg:DataGrid;
+			
+			protected function init():void {				
+				var arr:Array = [];
+				arr.push({label:"Carol"});
+				arr.push({label:"Darrell"});
+				arr.push({label:"Hans"});
+				arr.push({label:"Kevin"});
+				listaProfes.dataProvider = new ArrayCollection(arr);
+			}
+			
+			protected function button1_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				if(tutor.text == "" || curso.selectedItem == "" || !(nChupachups.value > 0 && nChupachups.value < 100 )  )
+					Alert.show("Porfavor introduce el nombre de algun tutor valido", "Error", mx.controls.Alert.OK);
+				else{
+				//blablbalbalbalbla
+					
+					/*var cursoGuardado:String;					
+					cursoString(cursoGuardado);*/
+					//listaCursos.dataProvider.addItem(new );
+					//arr_listaCursos.push({label:"lololo" }); 
+					arr_listaPrecio.push({label:"lol23" });
+					arr_listaPrecio.push({label:"lol12o" });
+					init();
+					//limpiar();
+					}
+					
+					
+			}
+					
+			
+			public function cursoString(cursoGuardado:String):void
+			{			
+				switch(curso.selectedItem){						
+					case "Grado Medio":
+						cursoGuardado = "GM";
+						break;
+					case "Grado Superior":
+						cursoGuardado = "GS";
+						break;
+				}
+			}
+			public function limpiar():void
+			{
+				tutor.text = "";
+				curso.selectedItem = "";
+				nChupachups.value = 0;
+			}
+			public function valor(cantidadChupachups:int):Number
+			{
+				return 0.5*cantidadChupachups;	
+			}
+			
+			protected function checkbox1_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				recaudacion.enabled = visualizarRecaudacion.selected;
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<s:RadioButtonGroup id="radiogroup1"/>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+
+	</fx:Declarations>
+	<s:Label  x="48" y="51" text="Tutor:"/>
+	<s:TextInput id="tutor" x="87" y="41"/>
+	<s:Label x="296" y="51" text="Curso:"/>
+	<s:Label x="48" y="86" text="ChupaChups:"/>
+	<s:DropDownList id="curso" x="376" y="42">
+		<s:dataProvider>
+			<s:ArrayList>
+				<fx:Array>					
+					<fx:Object label="Grado Medio" />
+					<fx:Object label="Grado Superior" />
+				</fx:Array>
+			</s:ArrayList>
+		</s:dataProvider>
+	</s:DropDownList>
+	
+	<s:NumericStepper id="nChupachups" x="145" y="86" maximum="100" minimum="0"/>
+	<s:Button x="218" y="88" label="Añadir" click="button1_clickHandler(event)"/>
+	<s:Label x="318" y="97" text="Recaudación:"/>
+	<s:TextInput id="recaudacion" x="443" y="97" editable="false" enabled="true" text="21"/>
+	<s:Label x="517" y="107" text="€"/>
+	<s:Label x="48" y="143" text="Datos del Tutor:"/>
+	<s:Label x="190" y="142" text="Curso:"/>
+	<s:Label x="281" y="142" text="€:"/>
+	<s:CheckBox id="visualizarRecaudacion" x="414" y="142" label="Visualizar recaudación"
+				click="checkbox1_clickHandler(event)"/>
+	<s:Label x="413" y="199" text="Recaudación total de:"/>
+	<s:VGroup x="414" y="241">
+		<s:RadioButton label="Todos" groupName="radiogroup1"/>
+		<s:RadioButton label="Grado Medio" groupName="radiogroup1"/>
+		<s:RadioButton label="Grado Superior" groupName="radiogroup1"/>
+	</s:VGroup>
+	<s:Button x="610" y="328" label="Eliminar fila"/>
+	<s:List id="listaProfes" x="48" y="195">
+
+	</s:List>
+	<s:List id="listaCursos" x="159" y="195">
+		<s:dataProvider>
+			<s:ArrayList>
+				<fx:Object label="" />
+			</s:ArrayList>
+		</s:dataProvider>
+	</s:List>
+	<s:List id="listaPrecio" x="270" y="195">
+		<s:dataProvider>
+			<s:ArrayList>
+				<fx:Array id="arr_listaPrecio">
+					<fx:Object label="" />
+				</fx:Array>
+			</s:ArrayList>
+		</s:dataProvider>
+	</s:List>
+</s:Application>
