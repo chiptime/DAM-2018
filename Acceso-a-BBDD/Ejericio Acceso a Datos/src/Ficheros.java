@@ -12,14 +12,13 @@ public class Ficheros {
     private int tablaRecoger[] = new int[10];
 
     //Escribir fichero: escribir los datos contenidos en una tabla y guardarlos en un fichero.
-
     public Ficheros(String pathname) {
         this.pathname = pathname;
          fichero = new File(pathname);
     }
     //1. Escribir fichero: escribir los datos contenidos en una tabla y guardarlos en un fichero.
     public void escribirFichero(){
-
+        System.out.println("Esta opcion solo te llenara el fichero con numeros del 1 al 10");
         volcarAFichero(numero);
     }
     //2. Leer fichero: abrir un fichero con 10 números y guardarlos en una tabla.
@@ -36,26 +35,29 @@ public class Ficheros {
                 resultado = freader.read(numeros_diez);
             }
             loDelArray = inToString(loDelArray, numeros_diez, comprobante);
-            stringToInt(loDelArray,tablaRecoger);
+            stringToInt(loDelArray, tablaRecoger);
 
+            escribirTabla("fichero");
 
             freader.close();
         }catch (IOException e) {
             e.printStackTrace();
         }
     }
-
     //3. Escribir: escribir por la consola los datos de la tabla.
     public void escribirPorConsola(){
+        escribirTabla("tabla");
+        System.out.println("Porfavor escribe los numeros que deseas guardar en la memoria (no en el fichero)");
         Scanner scan = new Scanner(System.in);
-        stringToInt(scan.nextLine(),tablaRecoger);
+        stringToInt(scan.nextLine(), tablaRecoger);
+
     }
     //4. Modificar tabla: Indicar la posición que se quiere modificar de la tabla y modificar los datos.
     public void modificarArray(){
         Scanner scan = new Scanner(System.in);
         System.out.println("Dime que dato quieres modificar (dame el numero de su posicion)");
         int posicion = scan.nextInt() - 1;
-        System.out.println("Dime el nuevo valor de la posicion: " + posicion);
+        System.out.println("Dime el nuevo valor de la posicion: " + (posicion+1));
         scan.nextLine();
         String valor = scan.nextLine();
 
@@ -64,11 +66,10 @@ public class Ficheros {
         stringToInt(valor,tablaDeUsuario_Comprobar);
         if(tablaDeUsuario_Comprobar[1] != '\0')
             System.out.println("Creo que te has pasado metiendo numero, solo se leera el primer numero");
-        leerFichero();
+        //leerFichero();
         tablaRecoger[posicion] =  tablaDeUsuario_Comprobar[0];
 
-        for (int i: tablaRecoger)
-            System.out.println(i);
+        escribirTabla("tabla");
     }
     //5. Actualizar tabla fichero: Guardar los datos existentes en la tabla sobre el fichero asociado.
     public void actualizarFichero(){
@@ -98,5 +99,15 @@ public class Ficheros {
               str += String.valueOf(numeros[i]);
         return str;
     }
-
+    public void escribirTabla(String str){
+        if(str.equals("tabla"))
+            System.out.println("Estado actual de la tabla: ");
+        if(str.equals("fichero"))
+            System.out.println("En el fichero estan los siguientes numeros: ");
+        System.out.print("Posicion \t1\t2\t3\t4\t5\t6\t7\t8\t9\t10\n" +
+                         "Numero\t\t");
+        for (int i: tablaRecoger)
+            System.out.print(i+"\t");
+        System.out.println();
+    }
 }

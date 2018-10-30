@@ -1,15 +1,16 @@
 import java.util.Scanner;
 
 public class Menu {
-
-    private String usuario;
-
-    public Menu(String usuario) {
-        this.usuario = usuario;
+    private Scanner scan;
+    private Ficheros ficheros;
+    public Menu() {
+        scan = new Scanner(System.in);
+        System.out.println("Dime como quieres que se llame tu fichero...");
+        ficheros = new Ficheros(scan.nextLine());
     }
 
     public void imprimirMenu(){
-        System.out.println(usuario.toUpperCase() + " elige una de la siguientes opciones:");
+        System.out.println("Elige una de la siguientes opciones:");
         System.out.println();
         System.out.println("1. Escribir un fichero");
         System.out.println("2. Leer un fichero");
@@ -21,13 +22,9 @@ public class Menu {
     }
     public void elegirOpcion(){
         int opcion = 0;
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Dime como quieres que se llame tu fichero...");
-        String nombreFichero = scan.nextLine();
-        Ficheros ficheros = new Ficheros(nombreFichero);
-
+        while(scan.hasNext()){
         opcion = scan.nextInt();
-        switch (opcion){
+        switch (opcion) {
             case 1:
                 ficheros.escribirFichero();
                 break;
@@ -35,15 +32,21 @@ public class Menu {
                 ficheros.leerFichero();
                 break;
             case 3:
+                ficheros.escribirPorConsola();
                 break;
             case 4:
+                ficheros.modificarArray();
                 break;
             case 5:
+                ficheros.actualizarFichero();
                 break;
             case 6:
-                break;
+                System.out.println("Hasta luego");
+                return;
             default:
+                System.out.println("La opcion elegida es incorrecta");
                 break;
+        }
         }
 
     }
