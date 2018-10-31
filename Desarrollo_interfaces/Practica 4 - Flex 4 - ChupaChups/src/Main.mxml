@@ -6,55 +6,86 @@
 	
 	<fx:Script>
 		<![CDATA[
-			import mx.controls.Alert;
-			//initialize="init();"
 			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
 			import mx.controls.DataGrid;
 			import mx.controls.dataGridClasses.DataGridColumn;
 			
-			protected var dg:DataGrid;
-			
-			protected function init():void {				
-				var arr:Array = [];
-				arr.push({label:"Carol"});
-				arr.push({label:"Darrell"});
-				arr.push({label:"Hans"});
-				arr.push({label:"Kevin"});
-				listaProfes.dataProvider = new ArrayCollection(arr);
-			}
+			import spark.events.IndexChangeEvent;
+			private var arr_listaProfes:Array = [];
+			private var arr_listaCurso:Array = [];
+			private var arr_listaPrecio:Array = [];
+			private var arr_recaudacion:Array = [];
+			private var pagoGM:Number = 0;
+			private var pagoGS:Number = 0;
+			private var pagoTotal:Number = 0;
 			
 			protected function button1_clickHandler(event:MouseEvent):void
 			{
 				// TODO Auto-generated method stub
-				if(tutor.text == "" || curso.selectedItem == "" || !(nChupachups.value > 0 && nChupachups.value < 100 )  )
+				if(tutor.text == "" || curso.selectedItem == "" || !(nChupachups.value > 0 && nChupachups.value <= 100 )  )
 					Alert.show("Porfavor introduce el nombre de algun tutor valido", "Error", mx.controls.Alert.OK);
 				else{
-				//blablbalbalbalbla
 					
-					/*var cursoGuardado:String;					
-					cursoString(cursoGuardado);*/
-					//listaCursos.dataProvider.addItem(new );
-					//arr_listaCursos.push({label:"lololo" }); 
-					arr_listaPrecio.push({label:"lol23" });
-					arr_listaPrecio.push({label:"lol12o" });
-					init();
+					arr_listaProfes.push({label:tutor.text});
+					listaProfes.dataProvider = new ArrayCollection(arr_listaProfes);
+					arr_listaCurso.push({label: cursoString(curso.selectedItem.label)});
+					listaCursos.dataProvider = new ArrayCollection(arr_listaCurso);
+					arr_listaPrecio.push({label: valor(nChupachups.value)});
+					listaPrecio.dataProvider = new ArrayCollection(arr_listaPrecio);
+					recaudar( cursoString(curso.selectedItem.label), valor(nChupachups.value));
+					recaudacion.text = comprobarCheckRecaudacion().toString();
 					//limpiar();
 					}
-					
-					
+			}
+			public function comprobarCheckRecaudacion():Number
+			{
+				if(chckGM.selected)
+					return pagoGM;
+				else
+					if(chckGS.selected)
+						return pagoGS;
+					else
+						return pagoTotal;
+			}
+
+			public function recaudar(clase:String, pago:Number):void
+			{	
+				if(clase == "GM")
+					pagoGM += pago;//posicion 0 arr = suma de pagos de Grado Medio
+				else
+					if(clase == "GS")
+						pagoGS += pago;//posicion 0 arr = suma de pagos de Grado Superior
+				pagoTotal += pago;//posicion 0 arr = suma de pago de Total
+			}
+			public function elegirTipoRecaudacion(signo:String, pago:Number, recaudacion:Number):Number
+			{
+				if(signo == "+"){
+					recaudacion += pago;
+					return recaudacion;
+				}
+				if(signo == "-"){
+					recaudacion -= pago;
+					return recaudacion;
+				}
+				return 0;
 			}
 					
 			
-			public function cursoString(cursoGuardado:String):void
+			public function cursoString(cursoGuardado:String):String
 			{			
-				switch(curso.selectedItem){						
+				var laCadena:String;
+				switch(curso.selectedItem.label)
+				{						
 					case "Grado Medio":
-						cursoGuardado = "GM";
+						laCadena = "GM";
 						break;
 					case "Grado Superior":
-						cursoGuardado = "GS";
+						laCadena = "GS";
 						break;
 				}
+				return laCadena;
+				
 			}
 			public function limpiar():void
 			{
@@ -70,7 +101,81 @@
 			protected function checkbox1_clickHandler(event:MouseEvent):void
 			{
 				// TODO Auto-generated method stub
-				recaudacion.enabled = visualizarRecaudacion.selected;
+				recaudacion.visible = visualizarRecaudacion.selected;
+			}
+			
+			protected function button2_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				pagoTotal = elegirTipoRecaudacion("-", listaPrecio.selectedItem.label , pagoTotal );
+				if(listaCursos.selectedItem.label == "GS")
+					pagoGS = elegirTipoRecaudacion("-", listaPrecio.selectedItem.label , pagoGS );
+				else
+					pagoGM = elegirTipoRecaudacion("-", listaPrecio.selectedItem.label , pagoGM );
+				
+				listaProfes.dataProvider.removeItemAt(listaProfes.selectedIndex);		
+				listaCursos.dataProvider.removeItemAt(listaCursos.selectedIndex).toString();
+					
+				if( !listaPrecio.dataProvider.removeItemAt(listaPrecio.selectedIndex))
+					Alert.show("Debe seleccionar alguna fila", "Error al eliminar", mx.controls.Alert.OK);					
+
+				recaudacion.text = comprobarCheckRecaudacion().toString();
+				
+			}
+			
+			protected function listaProfes_changeHandler(event:IndexChangeEvent):void
+			{
+				// TODO Auto-generated method stub
+				seleccionar(listaProfes);
+			}
+			
+			protected function listaCursos_changeHandler(event:IndexChangeEvent):void
+			{
+				// TODO Auto-generated method stub
+				seleccionar(listaCursos);
+			}
+			
+			protected function listaPrecio_changeHandler(event:IndexChangeEvent):void
+			{
+				// TODO Auto-generated method stub
+				seleccionar(listaPrecio);
+			}
+			
+			public function seleccionar(el:List):void
+			{
+				switch(el.id){
+					
+				case listaCursos.id:
+					listaProfes.selectedIndex = el.selectedIndex; 
+					listaPrecio.selectedIndex = el.selectedIndex;
+					break;
+				case listaPrecio.id:
+					listaProfes.selectedIndex = el.selectedIndex;
+					listaCursos.selectedIndex = el.selectedIndex; 
+					break;
+				case listaProfes.id:
+					listaCursos.selectedIndex = el.selectedIndex; 
+					listaPrecio.selectedIndex = el.selectedIndex;
+					break;
+				}
+			}
+			
+			protected function chckTodos_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				recaudacion.text = comprobarCheckRecaudacion().toString();
+			}
+			
+			protected function chckGM_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				recaudacion.text = comprobarCheckRecaudacion().toString();
+			}
+			
+			protected function chckGS_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				recaudacion.text = comprobarCheckRecaudacion().toString();
 			}
 			
 		]]>
@@ -82,13 +187,13 @@
 
 	</fx:Declarations>
 	<s:Label  x="48" y="51" text="Tutor:"/>
-	<s:TextInput id="tutor" x="87" y="41"/>
+	<s:TextInput id="tutor" x="87" y="41" width="181"/>
 	<s:Label x="296" y="51" text="Curso:"/>
-	<s:Label x="48" y="86" text="ChupaChups:"/>
-	<s:DropDownList id="curso" x="376" y="42">
+	<s:Label x="48" y="97" text="ChupaChups:"/>
+	<s:DropDownList id="curso" x="338" y="42" width="124" selectedIndex="1">
 		<s:dataProvider>
 			<s:ArrayList>
-				<fx:Array>					
+				<fx:Array id="cursoArrayDropDown">					
 					<fx:Object label="Grado Medio" />
 					<fx:Object label="Grado Superior" />
 				</fx:Array>
@@ -96,40 +201,29 @@
 		</s:dataProvider>
 	</s:DropDownList>
 	
-	<s:NumericStepper id="nChupachups" x="145" y="86" maximum="100" minimum="0"/>
-	<s:Button x="218" y="88" label="Añadir" click="button1_clickHandler(event)"/>
-	<s:Label x="318" y="97" text="Recaudación:"/>
-	<s:TextInput id="recaudacion" x="443" y="97" editable="false" enabled="true" text="21"/>
-	<s:Label x="517" y="107" text="€"/>
+	<s:NumericStepper id="nChupachups" x="125" y="86" maximum="100" minimum="0"/>
+	<s:Button x="198" y="86" label="Añadir" click="button1_clickHandler(event)"/>
+	<s:Label x="296" y="95" text="Recaudación:"/>
+	<s:TextInput id="recaudacion" visible="false" x="381" y="83" width="69" editable="false"
+				 enabled="true"/>
+	<s:Label x="458" y="93" text="€"/>
 	<s:Label x="48" y="143" text="Datos del Tutor:"/>
-	<s:Label x="190" y="142" text="Curso:"/>
-	<s:Label x="281" y="142" text="€:"/>
-	<s:CheckBox id="visualizarRecaudacion" x="414" y="142" label="Visualizar recaudación"
+	<s:Label x="172" y="142" text="Curso:"/>
+	<s:Label x="228" y="142" text="€:"/>
+	<s:CheckBox id="visualizarRecaudacion" x="296" y="136" label="Visualizar recaudación"
 				click="checkbox1_clickHandler(event)"/>
-	<s:Label x="413" y="199" text="Recaudación total de:"/>
-	<s:VGroup x="414" y="241">
-		<s:RadioButton label="Todos" groupName="radiogroup1"/>
-		<s:RadioButton label="Grado Medio" groupName="radiogroup1"/>
-		<s:RadioButton label="Grado Superior" groupName="radiogroup1"/>
+	<s:Label x="296" y="162" text="Recaudación total de:"/>
+	<s:VGroup x="296" y="182">
+		<s:RadioButton id="chckTodos" label="Todos" click="chckTodos_clickHandler(event)"
+					   groupName="radiogroup1" selected="true"/>
+		<s:RadioButton id="chckGM" label="Grado Medio" click="chckGM_clickHandler(event)"
+					   groupName="radiogroup1"/>
+		<s:RadioButton id="chckGS" label="Grado Superior" click="chckGS_clickHandler(event)"
+					   groupName="radiogroup1"/>
 	</s:VGroup>
-	<s:Button x="610" y="328" label="Eliminar fila"/>
-	<s:List id="listaProfes" x="48" y="195">
-
-	</s:List>
-	<s:List id="listaCursos" x="159" y="195">
-		<s:dataProvider>
-			<s:ArrayList>
-				<fx:Object label="" />
-			</s:ArrayList>
-		</s:dataProvider>
-	</s:List>
-	<s:List id="listaPrecio" x="270" y="195">
-		<s:dataProvider>
-			<s:ArrayList>
-				<fx:Array id="arr_listaPrecio">
-					<fx:Object label="" />
-				</fx:Array>
-			</s:ArrayList>
-		</s:dataProvider>
-	</s:List>
+	<s:Button x="296" y="256" width="104" label="Eliminar fila" click="button2_clickHandler(event)"/>
+	<s:List id="listaProfes" x="48" y="161" width="123" change="listaProfes_changeHandler(event)"/>
+	<s:List id="listaCursos" x="170" y="161" width="40" change="listaCursos_changeHandler(event)"/>
+	<s:List id="listaPrecio" x="209" y="161" width="29" change="listaPrecio_changeHandler(event)"/>
+	<s:TextInput id="test" x="170" y="383"/>
 </s:Application>
