@@ -11,7 +11,11 @@ package
 			this.nombre = nombre;
 			this.correo = correo;
 			this.contrasenia = contrasenia;
-		}		
+		}
+		public function getNombre():String
+		{
+			return nombre;
+		}
 		public function getCorreo():String
 		{
 			return correo;

@@ -223,7 +223,8 @@
 	</s:VGroup>
 	<s:Button x="296" y="256" width="104" label="Eliminar fila" click="button2_clickHandler(event)"/>
 	<s:List id="listaProfes" x="48" y="161" width="123" change="listaProfes_changeHandler(event)"/>
-	<s:List id="listaCursos" x="170" y="161" width="40" change="listaCursos_changeHandler(event)"/>
-	<s:List id="listaPrecio" x="209" y="161" width="29" change="listaPrecio_changeHandler(event)"/>
-	<s:TextInput id="test" x="170" y="383"/>
+	<s:List id="listaCursos" x="170" y="161" width="40" change="listaCursos_changeHandler(event)"
+			textAlign="right"/>
+	<s:List id="listaPrecio" x="209" y="161" width="29" change="listaPrecio_changeHandler(event)"
+			textAlign="right"/>
 </s:Application>

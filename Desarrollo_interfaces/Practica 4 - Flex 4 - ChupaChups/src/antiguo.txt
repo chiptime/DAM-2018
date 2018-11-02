@@ -3,13 +3,13 @@
 			   xmlns:s="library://ns.adobe.com/flex/spark"
 			   xmlns:mx="library://ns.adobe.com/flex/mx"
 			   width="954" minWidth="955" minHeight="600" currentState="authenticated"
-			   height.initial="628">
+			   height.initial="628"
+			   initialize="init();">
 	<fx:Script>
 		<![CDATA[
-			import mx.collections.ArrayCollection;
 			import mx.controls.Alert;
 			import mx.skins.halo.WindowBackground;
-			
+			import mx.collections.ArrayCollection;
 			import spark.events.TextOperationEvent;
 			
 			
@@ -27,13 +27,23 @@
 			public var lasPizzas:String = "";
 			public var count:int = 0;
 			public var randNum:Number;
-			
-			
-			
+			public var listaPizza:Array = [{label: "Margarita"}, {label: "Hawaiana"}, {label: "Cuatro Quesos"}, {label: "Carbonara"}, 
+				{label: "Barbacoa"},{label: "Steak House"}, {label: "Pepperoni"}, {label: "Pollo Y Barbacoa"}, {label: "Calzone"}];
+			public var listaToppings:Array = [{label: "Queso de cabra"}, {label: "Cuatro Quesos"}, {label: "Bacon"}, {label: "Jamon"}, {label: "Piña"},
+				{label: "Champiñones"}, {label: "Peperoni"}];
+			public var listaBase:Array = [{label : "Carbonara"}, {label: "Base Tomate"}, {label: "Barbacoa"}];
+
+			public function init():void
+			{
+				pizza.dataProvider    = new ArrayCollection(listaPizza);
+				base.dataProvider     = new ArrayCollection(listaBase);
+				toppings.dataProvider = new ArrayCollection(listaToppings);
+			}
 			protected function btn3_clickHandler(event:MouseEvent):void
 			{
 				// TODO Auto-generated method stub			
-				Alert.show("Lo sentimos esta en construcción", "Error", mx.controls.Alert.OK);		
+				init();
+				//Alert.show("Lo sentimos esta en construcción", "Error", mx.controls.Alert.OK);		
 			}
 			
 			protected function label1_clickHandler(event:MouseEvent):void
@@ -43,10 +53,8 @@
 			}
 			protected function button1_clickHandler(event:MouseEvent):void
 			{
-				if(usuario == null){
-					Alert.show("Me da que aun no te has creado una cuenta.", "Error de login", mx.controls.Alert.OK);			
-				}
-				
+				if(usuario == null)
+					Alert.show("Me da que aun no te has creado una cuenta.", "Error de login", mx.controls.Alert.OK);				
 				if(usuario.getCorreo() == loginUser.text && usuario.getContrasenia() == loginPass.text){					
 					if(userPassErr.visible){
 						userPassErr.visible = false;
@@ -60,7 +68,7 @@
 					loginPass.setStyle("borderColor", "#000000");
 					loginUser.text = "";
 					loginPass.text = "";
-					currentState = "authenticated";					
+					currentState = "authenticated";
 				}
 				else{
 					userPassErr.visible = true;
@@ -210,37 +218,39 @@
 			protected function filtro_changeHandler(event:TextOperationEvent):void
 			{
 				// TODO Auto-generated method stub
-				seleccionFiltro();			
-			}
-			public function seleccionFiltro():void
-			{
-				switch(comboFiltro.selectedItem)
-				{
-					case "Pizza":
-						filtrar(listaPizza,repuesto,filtro);
-						break;
-					case "Base":
-						filtrar(listaBase,repuesto,filtro);
-						break;
-					case "Toppings":
-						filtrar(listaToppings,repuesto,filtro);
-						break;
-				}
-			}
-			
-			public function filtrar(listaAFiltrar:ArrayList , listaSuplementaria:ArrayList, input:TextInput):void
-			{			
-				for(var i:int = 0; i < listaAFiltrar.length; i++){
-					for(var j:int = 0; j < listaAFiltrar.getItemAt(i).toString().toLowerCase().length; j++){
-						if( input.text == listaAFiltrar.getItemAt(i).toString().toLowerCase().substring(j, 
-							(listaAFiltrar.getItemAt(i).toString().toLowerCase().length < j)? j : j+1 )
-							|| input.text == listaAFiltrar.getItemAt(i).toString().toLowerCase().substring(0, input.text.length)){
+				var arr:Array;
+				var arrLetras:Array;
+				var palabra:String;
+				
+				for(var i:int = 0; i < listaPizza.length; i++){
+					for(var j:int = 0; j < listaPizza.getItemAt(i).toString().toLowerCase().length; j++){
+						if( filtro.text == listaPizza.getItemAt(i).toString().toLowerCase().substring(j, (listaPizza.getItemAt(i).toString().toLowerCase().length < j)? j : j+1 )){
+							listaPizza.unshift(listaPizza.getItemAt(i));
+							//listaPizza.setItemAt(listaPizza.getItemAt(i), listaPizza.length +2);
+							/*
+							for(var k:int = 0; k <listaPizza.length; k++)
+								listaPizza.setItemAt(listaPizza.getItemAt(i));*/
 							
-							listaSuplementaria.addItemAt(listaAFiltrar.removeItemAt(i),0);
-							listaAFiltrar.addItemAt(repuesto.getItemAt(0),0);
 						}
-					}					
+					}
+					
 				}
+			}
+			public function filtrar(str:String, text:String):void
+			{
+				
+				if(str.search(text) != -1)					
+					switch(str){
+						case "Pizza":
+							
+							break;
+						case "Toppings":
+							
+							break;
+						case "Base":
+							
+							break;
+					}
 			}
 			
 		]]>
@@ -251,49 +261,7 @@
 	<fx:Declarations>
 		<s:RadioButtonGroup id="radiogroup"/>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->		
-		
-		
-		<s:ArrayList id="listaPizza">
-			<fx:String>Margarita</fx:String>
-			<fx:String>Hawaiana</fx:String>
-			<fx:String>Cuatro quesos</fx:String>
-			<fx:String>Carbonara</fx:String>
-			<fx:String>Barbacoa</fx:String>
-			<fx:String>Steak House</fx:String>
-			<fx:String>Pepperoni</fx:String>
-			<fx:String>Pollo y Barbacoa</fx:String>
-			<fx:String>Calzone</fx:String>
-		</s:ArrayList>
-		
-		
-		<s:ArrayList id="repuesto">
-			<fx:String></fx:String>
-			<fx:String></fx:String>
-			<fx:String></fx:String>
-			<fx:String></fx:String>
-			<fx:String></fx:String>
-			<fx:String></fx:String>
-			<fx:String></fx:String>
-			<fx:String></fx:String>
-			<fx:String></fx:String>
-			<fx:String></fx:String>
-		</s:ArrayList>
-		
-		<s:ArrayList id="listaToppings">
-			<fx:String>Queso de cabra</fx:String>
-			<fx:String>Cuatro quesos</fx:String>
-			<fx:String>Bacon</fx:String>
-			<fx:String>Jamon</fx:String>
-			<fx:String>Piña</fx:String>
-			<fx:String>Champiñones</fx:String>
-			<fx:String>Peperoni</fx:String>
-		</s:ArrayList>
-		
-		<s:ArrayList id="listaBase">
-			<fx:String>Carbonara</fx:String>
-			<fx:String>Base Tomate</fx:String>
-			<fx:String>Barbacoa</fx:String>			
-		</s:ArrayList>
+
 		
 		<s:ArrayList id="comboBox">
 			<fx:String>Pizza</fx:String>
@@ -378,11 +346,11 @@
 			 horizontalCenter="0"
 			 verticalCenter="0">
 		
-		<s:List id="pizza" x="0" y="211" width="228" height="102" dataProvider="{listaPizza}" ></s:List>
-		<s:List id="base" x="236" y="211" width="237.5" height="102" dataProvider="{listaBase}"
+		<s:List id="pizza" x="0" y="211" width="228" height="102" ></s:List>
+		<s:List id="base" x="236" y="211" width="237.5" height="102" 
 				enabled="true"></s:List>
 		<s:List id="toppings" x="482" y="211" width="237.5" height="102"
-				allowMultipleSelection="true" dataProvider="{listaToppings}" enabled="true"></s:List>
+				allowMultipleSelection="true"  enabled="true"></s:List>
 		<s:TextInput id="filtro" x="0" y="133" width="228" change="filtro_changeHandler(event)"
 					 enabled="true" prompt="type filter text..."/>
 		<s:Button id="terminarCompra" x="483" y="521" width="240" height="43" label="Terminar compra"
