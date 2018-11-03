@@ -3,7 +3,8 @@
 			   xmlns:s="library://ns.adobe.com/flex/spark"
 			   xmlns:mx="library://ns.adobe.com/flex/mx"
 			   width="954" minWidth="955" minHeight="600" currentState="authenticated"
-			   height.initial="628">
+			   height.initial="628"
+			   initialize="init();">
 	<fx:Script>
 		<![CDATA[
 			import mx.collections.ArrayCollection;
@@ -12,14 +13,6 @@
 			
 			import spark.events.TextOperationEvent;
 			
-			
-			
-			public var list:ArrayList; 
-			public function initData():void { 
-				list.addItem(listaPizza);
-				list.addItem(listaToppings);
-				list.addItem(listaBase);
-			}
 			//public var usuario:Usuario = new Usuario("test", "test", "test");
 			
 			public var usuario:Usuario;
@@ -27,8 +20,33 @@
 			public var lasPizzas:String = "";
 			public var count:int = 0;
 			public var randNum:Number;
+			public var contadorPizzas:int = 0;
+			public var pizzasPedidas:Array;
 			
+			public var margarita:Pizza        = new Pizza("Margarita"			,"Tomate", 	  ["Queso",  "Oregano"]) ;
+			public var hawaina:Pizza          = new Pizza("Hawaina"				,"Tomate", 	  ["Queso",  "Oregano", "Piña", "Jamon"]) ;
+			public var cuatroQuesos:Pizza 	  = new Pizza("Cuatro quesos"		,"Tomate",	  ["Queso",  "Oregano", "Cuatro Quesos"]) ;
+			public var carbonara:Pizza   	  = new Pizza("Carbonara"			,"Carbonara", ["Queso",  "Oregano", "Bacon", "Jamon"]) ;
+			public var barbacoa:Pizza   	  = new Pizza("Barbacoa"			,"Barbacoa",  ["Queso Mozzarella",  "Carne Picada", "Cebolla", "Bacon", "Pollo"]) ;
+			public var steakHouse:Pizza  	  = new Pizza("Steak House"			,"Tomate", 	  ["Queso",  "Oregano", "Mozzarella Steak", "Cerdo", "Carne Picada", "Bacon Crispy", "Salsa Steak & Grill"]) ;
+			public var pepperoni:Pizza  	  = new Pizza("Pepperoni"			,"Tomate", 	  ["Queso",  "Oregano", "Pepperoni"]) ;
+			public var polloBarbacoa:Pizza    = new Pizza("Pollo Y Barbacoa"	,"Barbacoa",  ["Queso",  "Oregano", "Pollo"]) ;			
+			public var calzone:Pizza       	  = new Pizza("Calzone"			    ,"Tomate",    ["Queso",  "Oregano", "Jamon"]) ;
 			
+			public var listaPizzas:ArrayList = new ArrayList();
+			
+			private function init():void
+			{
+				listaPizzas.addItem(margarita);
+				listaPizzas.addItem(hawaina);
+				listaPizzas.addItem(cuatroQuesos);
+				listaPizzas.addItem(carbonara);
+				listaPizzas.addItem(barbacoa);
+				listaPizzas.addItem(steakHouse);
+				listaPizzas.addItem(pepperoni);
+				listaPizzas.addItem(polloBarbacoa);				
+				listaPizzas.addItem(calzone);
+			}
 			
 			protected function btn3_clickHandler(event:MouseEvent):void
 			{
@@ -141,8 +159,8 @@
 					Alert.show("Se ha creado su cuenta " + usuario.getCorreo(), "Creacion correcta", mx.controls.Alert.OK);
 					currentState = "initial";
 				}
-					else
-						Alert.show("Porfavor rellene todos los campos", "Error de login", mx.controls.Alert.OK);
+				else
+					Alert.show("Porfavor rellene todos los campos", "Error de login", mx.controls.Alert.OK);
 				areaPruebas.text += "\n\n" + "Usuario: " + usuario.getCorreo() + "\nContraseña: "+ usuario.getContrasenia();				
 			}
 			public function resetRandom():void
@@ -173,8 +191,52 @@
 			{
 				// TODO Auto-generated method stub				
 				count++;
-				lasPizzas += pizza.selectedItem+"\n" + base.selectedItem + "\t" + toppings.selectedItems+"\n\n" ;				
-				areaListaPizzas.text = lasPizzas;
+				estructurarPizzas();
+			}
+			public function estructurarPizzas():void
+			{
+				areaListaPizzas.text += "\n\n";
+				
+				//Nombre de la Pizza
+				lasPizzas += "Nombre: " + listaPizzas.getItemAt(pizza.selectedIndex).getNombre() + "\n";
+				
+				//Base
+				var baseString:String = "";
+				if(listaPizzas.getItemAt(pizza.selectedIndex).getBase() == base.selectedItem)
+					baseString = listaPizzas.getItemAt(pizza.selectedIndex).getBase();
+				else
+					baseString = base.selectedItem;
+				//
+				if(baseString == null)
+					baseString = listaPizzas.getItemAt(pizza.selectedIndex).getBase();
+				lasPizzas += "Base: "  + baseString + "\n" ;	
+				//Seleccionar toppings
+				var losToppings:Array;
+				var losToppingsExtra:String = "";
+				var toppingsUnicos:Array;				
+				// Añade los toppings basicos de la pizza seleccionada
+				
+				losToppings = listaPizzas.getItemAt(pizza.selectedIndex).getToppings().toString().split(",");
+				toppingsUnicos = toppings.selectedItems.toString().split(",");
+				
+				lasPizzas += "Toppings: \n";
+				for (var n:int = 0; n < losToppings.length; n++)
+					lasPizzas += losToppings[n] + ((n < losToppings.length-1)? ", " :".");
+				
+				for(var i:int = 0; i < losToppings.length; i++)
+					for(var j:int = 0; j < toppings.selectedItems.length; j++)
+						if(losToppings[i].toLowerCase() == toppings.selectedItems[j].toLowerCase())
+							toppingsUnicos[j] = "";
+				
+				
+				for(var l:int = 0; l < toppingsUnicos.length; l++){
+					
+					if(toppingsUnicos[l] != "")
+						lasPizzas += toppingsUnicos[l] + ((l < toppingsUnicos.length-1)? ", " :".");
+				}
+				lasPizzas += "\n\n";
+				//pizzasPedidas[contadorPizzas++] = lasPizzas;  
+				areaListaPizzas.text += lasPizzas ;
 			}
 			
 			protected function terminarCompra_clickHandler(event:MouseEvent):void
@@ -230,19 +292,15 @@
 			
 			public function filtrar(listaAFiltrar:ArrayList , listaSuplementaria:ArrayList, input:TextInput):void
 			{			
-				for(var i:int = 0; i < listaAFiltrar.length; i++){
-					for(var j:int = 0; j < listaAFiltrar.getItemAt(i).toString().toLowerCase().length; j++){
+				for(var i:int = 0; i < listaAFiltrar.length; i++)
+					for(var j:int = 0; j < listaAFiltrar.getItemAt(i).toString().toLowerCase().length; j++)
 						if( input.text == listaAFiltrar.getItemAt(i).toString().toLowerCase().substring(j, 
 							(listaAFiltrar.getItemAt(i).toString().toLowerCase().length < j)? j : j+1 )
-							|| input.text == listaAFiltrar.getItemAt(i).toString().toLowerCase().substring(0, input.text.length)){
-							
+							|| input.text == listaAFiltrar.getItemAt(i).toString().toLowerCase().substring(0, input.text.length)){							
 							listaSuplementaria.addItemAt(listaAFiltrar.removeItemAt(i),0);
 							listaAFiltrar.addItemAt(repuesto.getItemAt(0),0);
 						}
-					}					
-				}
-			}
-			
+			}			
 		]]>
 	</fx:Script>
 	
@@ -261,7 +319,7 @@
 			<fx:String>Barbacoa</fx:String>
 			<fx:String>Steak House</fx:String>
 			<fx:String>Pepperoni</fx:String>
-			<fx:String>Pollo y Barbacoa</fx:String>
+			<fx:String>Pollo Y Barbacoa</fx:String>
 			<fx:String>Calzone</fx:String>
 		</s:ArrayList>
 		
@@ -291,7 +349,7 @@
 		
 		<s:ArrayList id="listaBase">
 			<fx:String>Carbonara</fx:String>
-			<fx:String>Base Tomate</fx:String>
+			<fx:String>Tomate</fx:String>
 			<fx:String>Barbacoa</fx:String>			
 		</s:ArrayList>
 		
@@ -411,7 +469,7 @@
 		<s:Label x="573" y="186" fontSize="18" fontWeight="bold" text="Toppings"/>
 		<s:Label x="335" y="186" fontSize="18" fontWeight="bold" text="Base"/>
 		<s:TextArea id="areaListaPizzas" x="0" y="346" width="445" height="168" editable="false"
-					text="&quot;Tus Pizzas son: \n&quot;"/>
+					text="Tus Pizzas son: "/>
 		<s:Button x="603" y="135" width="110" label="Agregar pizza"
 				  click="button7_clickHandler(event)"/>
 		<s:Label x="0" y="321" fontSize="18" fontWeight="bold" text="Lista de Pizzas Pedidas"/>
@@ -437,7 +495,7 @@
 		<s:Button id="salir" x="432" y="571" label="Salir" click="closeWindow()"/>
 		
 	</s:Group>
-		
+	
 	
 	
 	
