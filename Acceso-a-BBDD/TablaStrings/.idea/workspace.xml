@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eeeb1163-ea48-43e3-9f36-55b710cd570d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 4 - Flex 4 - ChupaChups/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 4 - Flex 4 - ChupaChups/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Ejercicios JAVA – Ficheros Tabla Persona/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Ejercicios JAVA – Ficheros Tabla Persona/Ejercicios JAVA – Ficheros Tabla Persona.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Ejercicios JAVA – Ficheros Tabla Persona/src/FicheroNombres.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Ejercicios JAVA – Ficheros Tabla Persona/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Ejercicios JAVA – Ficheros Tabla Persona/src/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuntes varios/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Apuntes varios/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CrearCarpetaJava/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CrearCarpetaJava/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CrearCarpetasArchivos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CrearCarpetasArchivos/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejericio Acceso a Datos/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejericio Acceso a Datos/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejericio Acceso a Datos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejericio Acceso a Datos/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejericio Acceso a Datos/Ejericio Acceso a Datos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejericio Acceso a Datos/Ejercicio Acceso a Datos.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Execepciones/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Execepciones/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FicherosConJava/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FicherosConJava/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Java1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 4 - Flex 4 - ChupaChups.rar" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,11 +30,12 @@
     <session id="1917417829">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.6" value="3" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -62,8 +78,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Ficheros.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="65" column="41" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
+            <state relative-caret-position="-84">
+              <caret line="46" column="63" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -103,10 +119,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="456" />
-    <option name="y" value="-11" />
-    <option name="width" value="974" />
-    <option name="height" value="580" />
+    <option name="x" value="14" />
+    <option name="y" value="-21" />
+    <option name="width" value="1296" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -114,6 +130,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Course" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -121,20 +140,22 @@
               <item name="TablaStrings" type="b2602c69:ProjectViewProjectNode" />
               <item name="TablaStrings" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="TablaStrings" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TablaStrings" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Course" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540929596358" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 4 - Flex 4 - ChupaChups" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -177,6 +198,9 @@
       <workItem from="1540925137266" duration="4546000" />
       <workItem from="1540929709395" duration="49000" />
       <workItem from="1541026999730" duration="699000" />
+      <workItem from="1541265487680" duration="26000" />
+      <workItem from="1541271914811" duration="170000" />
+      <workItem from="1541274609695" duration="1638000" />
     </task>
     <task id="LOCAL-00001" summary="Ejercicio 2 - Tabla Nombres - Acceso a Datos">
       <created>1540929627339</created>
@@ -189,12 +213,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5294000" />
+    <option name="totallyTimeSpent" value="7128000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25809062" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.27022654" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -247,8 +272,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Ficheros.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="65" column="41" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
+        <state relative-caret-position="-84">
+          <caret line="46" column="63" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

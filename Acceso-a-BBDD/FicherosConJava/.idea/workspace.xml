@@ -2,102 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acbd18d9-67ed-441b-9bd7-69e4068d8449" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/.idea/Desarrollo_interfaces.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Gui compra/.classpath" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Gui compra/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Gui compra/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Gui compra/bin/Compra$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Gui compra/bin/Compra$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Gui compra/bin/Compra.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Gui compra/bin/Login$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Gui compra/bin/Login$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Gui compra/bin/Login$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Gui compra/bin/Login$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Gui compra/bin/Login.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Gui compra/src/Compra.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Gui compra/src/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 1/bin/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/.idea/Practica 2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/bin/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/.classpath" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/bin/Hija$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/bin/Hija$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/bin/Hija.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/bin/Nieta$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/bin/Nieta.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/bin/framePrincipal$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/bin/framePrincipal$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/bin/framePrincipal$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/bin/framePrincipal.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/miglayout-src.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/miglayout15-swing.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/src/Hija.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/src/Nieta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/src/framePrincipal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica_2/bin/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/UI_Practicar/.classpath" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/UI_Practicar/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/UI_Practicar/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/UI_Practicar/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/UI_Practicar/src/Compra.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/UI_Practicar/src/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/.idea/PServicios_Y_Procesos.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/envi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/envi.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/enviroment" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/enviroment.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/fileMap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/fileMap.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/fork-exec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/fork-exec.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/job-queue3.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/map.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/self" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/sem_all_deall.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/sem_angel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/sem_angel.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/semaforo_2Hilos" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/semaforo_2Hilos.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/sigchld" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/sigchld.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/sigus" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/sigus.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/sigusr1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/sigusr1.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/strtok" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/strtok.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/temp.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/thread.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/threads" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/threads.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/bin/Interfaz$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/bin/Interfaz$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/bin/Interfaz$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/bin/Interfaz$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/bin/Interfaz$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/bin/Interfaz$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/bin/Interfaz$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/bin/Interfaz$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/bin/Interfaz.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/bin/Interfaz.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/bin/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/bin/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/src/Interfaz.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/src/Interfaz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/src/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/src/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/src/URLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 2/src/URLReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PServicios_Y_Procesos/self.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../PServicios_Y_Procesos/self.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Apuntes varios/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Apuntes varios/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CrearCarpetaJava/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CrearCarpetaJava/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CrearCarpetasArchivos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CrearCarpetasArchivos/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejericio Acceso a Datos/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejericio Acceso a Datos/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejericio Acceso a Datos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejericio Acceso a Datos/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejericio Acceso a Datos/Ejericio Acceso a Datos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejericio Acceso a Datos/Ejercicio Acceso a Datos.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Execepciones/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Execepciones/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TablaStrings/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TablaStrings/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 4 - Flex 4 - ChupaChups.rar" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,6 +40,15 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-1560631852">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf />
@@ -134,10 +56,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1296" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -145,7 +74,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -158,10 +86,15 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Course" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540366565923" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -185,22 +118,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540365427204</updated>
+      <workItem from="1541272301880" duration="6000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12153518" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.122977346" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -208,15 +143,22 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -225,14 +167,8 @@
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/FicherosConJava.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml" />
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml" />
+    <entry file="file://$PROJECT_DIR$/.idea/FicherosConJava.iml" />
   </component>
 </project>

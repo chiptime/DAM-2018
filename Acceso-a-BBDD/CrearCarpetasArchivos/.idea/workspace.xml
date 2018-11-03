@@ -2,39 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b16b5f98-a5dd-48f4-ac96-1a9791787ba0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 1/bin/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 1/bin/Pizza.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 1/bin/Pizza.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 1/bin/Practica$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 1/bin/Practica$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 1/bin/Practica$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 1/bin/Practica$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 1/bin/Practica$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 1/bin/Practica$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 1/bin/Practica$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 1/bin/Practica$8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 1/bin/Practica.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 1/bin/Practica.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 3-1/.actionScriptProperties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 3-1/.actionScriptProperties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 3-1/.flexProperties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 3-1/.flexProperties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 3-1/bin-debug/Main.swf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 3-1/bin-debug/Main.swf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 3-1/src/Login.as" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 3-1/src/Login.as" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 3-1/src/Main.mxml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 3-1/src/Main.mxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 3-1/src/Usuario.as" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 3-1/src/Usuario.as" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/bin/Hija$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/bin/Hija$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/bin/Hija.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/bin/Hija.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/bin/Nieta$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/bin/Nieta.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/bin/Nieta.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/bin/framePrincipal$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/bin/framePrincipal$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/bin/framePrincipal$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/bin/framePrincipal.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica Opcional/bin/framePrincipal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica_2/bin/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica_2/bin/Conectado$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica_2/bin/Conectado.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica_2/bin/Conectado.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica_2/bin/Practica_2$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica_2/bin/Practica_2$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica_2/bin/Practica_2$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica_2/bin/Practica_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica_2/bin/Practica_2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CrearCarpetaJava/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CrearCarpetaJava/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejericio Acceso a Datos/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejericio Acceso a Datos/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejericio Acceso a Datos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejericio Acceso a Datos/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejericio Acceso a Datos/Ejericio Acceso a Datos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejericio Acceso a Datos/Ejercicio Acceso a Datos.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TablaStrings/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TablaStrings/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 4 - Flex 4 - ChupaChups.rar" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,10 +21,11 @@
     <session id="-295568668">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -83,7 +58,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="352">
               <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
@@ -92,7 +67,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Carpeta.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="396">
               <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -149,6 +124,11 @@
               <item name="CrearCarpetas" type="b2602c69:ProjectViewProjectNode" />
               <item name="CrearCarpetasArchivos" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="CrearCarpetas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CrearCarpetasArchivos" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -159,7 +139,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540237196773" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../IdeaProjects" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Ejericio Acceso a Datos" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -201,17 +181,18 @@
       <updated>1540234279329</updated>
       <workItem from="1540234282299" duration="2977000" />
       <workItem from="1540587618890" duration="32000" />
+      <workItem from="1541272112971" duration="8000" />
+      <workItem from="1541272224955" duration="6000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3009000" />
+    <option name="totallyTimeSpent" value="3023000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49884528" visible="true" weight="0.2540453" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49884528" visible="true" weight="0.26213592" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -248,20 +229,20 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Carpeta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="396">
           <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>

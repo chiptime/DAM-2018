@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6c2f089-5136-4334-b635-9b9ced15f1f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TablaEnteros.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Execepciones/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java1/src/Fecha.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java1/src/Fraccion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java1/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java1/src/NIF.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java1/src/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CrearCarpetaJava/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CrearCarpetaJava/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CrearCarpetasArchivos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CrearCarpetasArchivos/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejericio Acceso a Datos/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejericio Acceso a Datos/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejericio Acceso a Datos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejericio Acceso a Datos/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejericio Acceso a Datos/Ejericio Acceso a Datos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejericio Acceso a Datos/Ejercicio Acceso a Datos.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Execepciones/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Execepciones/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FicherosConJava/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FicherosConJava/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TablaStrings/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TablaStrings/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 4 - Flex 4 - ChupaChups.rar" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,27 +49,18 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1719009312">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/TablaEnteros.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-              <folding>
-                <element signature="e#83#84#0" expanded="true" />
-                <element signature="e#117#118#0" expanded="true" />
-                <element signature="e#481#482#0" expanded="true" />
-                <element signature="e#509#510#0" expanded="true" />
-                <element signature="e#550#551#0" expanded="true" />
-                <element signature="e#584#585#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -88,10 +80,17 @@
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
+    <option name="x" value="282" />
+    <option name="y" value="588" />
     <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="height" value="1044" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -117,10 +116,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539763914982" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Java1" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -158,24 +161,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1539761395101</updated>
+      <workItem from="1541272186829" duration="461000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="461000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="282" y="588" width="974" height="1044" extended-state="0" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.5131291" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.5251641" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.33296824" />
@@ -183,41 +186,29 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Clases.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TablaEnteros.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-          <folding>
-            <element signature="e#83#84#0" expanded="true" />
-            <element signature="e#117#118#0" expanded="true" />
-            <element signature="e#481#482#0" expanded="true" />
-            <element signature="e#509#510#0" expanded="true" />
-            <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#584#585#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Clases.java" />
+    <entry file="file://$PROJECT_DIR$/src/TablaEnteros.java" />
   </component>
 </project>
