@@ -65,17 +65,11 @@ public class Menu {
                 break;
             case 6:
                 personas = ordenarPorNombre(personas);
-                System.out.println("Antes de empezar elija la ruta a usar");
-                ruta = elegirRuta();
-                ficheros.abrir("E",ruta);
-                ficheros.escribir(personas);
+                escribirEnElFichero(ruta,ficheros,personas);
                 break;
             case 7:
                 personas = ordenarPorEdad(personas);
-                System.out.println("Antes de empezar elija la ruta a usar");
-                ruta = elegirRuta();
-                ficheros.abrir("E",ruta);
-                ficheros.escribir(personas);
+                escribirEnElFichero(ruta,ficheros,personas);
                 break;
             case 8:
                 System.out.println("Hasta luego");
@@ -86,6 +80,12 @@ public class Menu {
         }
         }
 
+    }
+    public void escribirEnElFichero(String ruta, FicheroNombres ficheros, Persona personas[]){
+        System.out.println("Antes de empezar elija la ruta a usar");
+        ruta = elegirRuta();
+        ficheros.abrir("E",ruta);
+        ficheros.escribir(personas);
     }
     public Persona crearPersonaNueva(){
         String nombre    = "";
