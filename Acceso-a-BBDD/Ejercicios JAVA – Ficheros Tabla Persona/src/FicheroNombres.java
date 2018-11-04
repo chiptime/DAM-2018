@@ -27,12 +27,16 @@ public class FicheroNombres {
         }
     }
 
-    public void escribir(Persona persona) {
+    public void escribir(Persona persona[]) {
         try {
-            personaToArray(persona,"nombre");
-            personaToArray(persona,"apellido");
-            personaToArray(persona,"edad");
-            personaToArray(persona,"direccion");
+            int i = 0;
+            while(persona.length > i) {
+                personaToArray(persona[i], "nombre");
+                personaToArray(persona[i], "apellido");
+                personaToArray(persona[i], "edad");
+                personaToArray(persona[i], "direccion");
+                i++;
+            }
             fwriter.close();
         } catch (IOException e) {
             e.printStackTrace();
@@ -86,10 +90,8 @@ public class FicheroNombres {
     }
 
 
-    public Persona leer() {
-        //Persona persona = new Persona("hola","como" ,11 ,"estas" );
-        Persona persona;
-
+    public Persona[] leer() {
+        Persona persona[] = new Persona[50];
         try {
             char[] numeros_diez = new char[600];
             String loDelArray = "";
@@ -105,30 +107,43 @@ public class FicheroNombres {
 
             loDelArray = charToStrings(loDelArray, numeros_diez, comprobante);
             stringToArrayString(loDelArray, losNombres);
-
-
-            escribirTabla("tabla", losNombres);
-
             freader.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        persona = new Persona(losNombres[0],losNombres[1] , Integer.parseInt(losNombres[2]) ,losNombres[3] );
+        int p = 0;
+        int i = 0;
+        while(losNombres[i] != null) {
+            persona[p] = new Persona(losNombres[i], losNombres[i + 1],
+                    Integer.parseInt(losNombres[i + 2]), losNombres[i + 3]);
+            i += 4;
+            p++;
+        }
         return persona;
     }
+    public void escribirPersonas(Persona persona[]){
+        int s = 0;
+        while(persona[s] != null) {
+            escribirTabla("tabla", persona[s].toString().split(","),s);
+            s++;
+        }
+    }
 
-    public void escribirTabla(String str, String[] nombre) {
-        if (str.equals("tabla"))
-            System.out.println("Estado actual de la tabla: \n");
-        if (str.equals("fichero"))
-            System.out.println("En el fichero estan los siguientes numeros: ");
-        System.out.println("Campos\t\t\t |\t Datos"
-                        + "\n---------------------------------");
+    public void escribirTabla(String str, String[] nombre, int contador) {
+        if(contador < 1) {
+            if (str.equals("tabla"))
+                System.out.println("Estado actual de la tabla: \n");
+            if (str.equals("fichero"))
+                System.out.println("En el fichero estan los siguientes numeros: ");
+
+            System.out.println("Campos\t\t\t |\t Datos"
+                    + "\n---------------------------------");
+        }
         for (int i = 0; i < nombre.length; i++)
             if (nombre[i] != null)
                 switch (i){
                     case 0:
-                        System.out.println("Nombre" + "\t\t\t |\t " + nombre[i]);
+                        System.out.println("Nombre" + "\t\t\t |\t " + nombre[i].replace("\r\n","" ));
                         break;
                     case 1:
                         System.out.println("Apellido" + "\t\t |\t " + nombre[i]);

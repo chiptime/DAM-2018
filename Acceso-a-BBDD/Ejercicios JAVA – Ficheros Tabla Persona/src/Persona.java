@@ -41,4 +41,9 @@ public class Persona {
     public String getDireccion() {
         return direccion;
     }
+
+    @Override
+    public String toString() {
+        return nombre + "," + apellido + "," + edad + "," + direccion;
+    }
 }

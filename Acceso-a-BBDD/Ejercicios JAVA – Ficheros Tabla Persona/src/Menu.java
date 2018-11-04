@@ -43,13 +43,16 @@ public class Menu {
                 System.out.println("Antes de empezar elija la ruta a usar");
                 ruta = elegirRuta();
                 ficheros.abrir("L", ruta);
-                personas[contadorPersonas++] = ficheros.leer();
+                personas = ficheros.leer();
+                ficheros.escribirPersonas(personas);
                 break;
             case 2:
                 System.out.println("Antes de empezar elija la ruta a usar");
                 ruta = elegirRuta();
                 ficheros.abrir("E",ruta);
-                ficheros.escribir(crearPersonaNueva());
+                for (int i = 0 ; i < personas.length; i++)
+                    personas[i] = crearPersonaNueva();
+                ficheros.escribir(personas);
                 break;
             case 3:
                 escribirNombres();
@@ -61,10 +64,18 @@ public class Menu {
                 escribirNombresMayores();
                 break;
             case 6:
-                ordenarPorNombre();
+                personas = ordenarPorNombre(personas);
+                System.out.println("Antes de empezar elija la ruta a usar");
+                ruta = elegirRuta();
+                ficheros.abrir("E",ruta);
+                ficheros.escribir(personas);
                 break;
             case 7:
-                ordenarPorEdad();
+                personas = ordenarPorEdad(personas);
+                System.out.println("Antes de empezar elija la ruta a usar");
+                ruta = elegirRuta();
+                ficheros.abrir("E",ruta);
+                ficheros.escribir(personas);
                 break;
             case 8:
                 System.out.println("Hasta luego");
@@ -105,7 +116,7 @@ public class Menu {
             }
             i++;
         }
-        Persona persona = new Persona(nombre,apellido ,edad ,direccion );
+        Persona persona = new Persona(nombre, apellido, edad, direccion);
         return persona;
     }
     public void escribirNombres(){
@@ -124,12 +135,29 @@ public class Menu {
 
     //Ordenar fichero nombre: Al seleccionar esta opción, se almacenarán los datos de las personas
     //sobre el fichero ordenados según el nombre de la persona en orden ascendente.
-    public void ordenarPorNombre(){
-        Arrays.sort(personas, (a, b) -> a.nombre.toLowerCase().compareTo(b.nombre.toLowerCase()));
+    public Persona[] ordenarPorNombre(Persona persona[]){
+        Persona personaNoNull[] = personasNoNull(persona);
+        Arrays.sort(personaNoNull, (a, b) -> a.nombre.toLowerCase().compareTo(b.nombre.toLowerCase()));
+        return personaNoNull;
     }
     //o Ordenar fichero edad: Al seleccionar esta opción, se almacenarán los datos de las personas sobre
     //el fichero ordenados según la edad de la persona en orden ascendente.
-    public void ordenarPorEdad(){
-        Arrays.sort(personas, (a, b) -> String.valueOf(a.getEdad()).compareTo(String.valueOf(b.getEdad())));
+    public Persona[] ordenarPorEdad(Persona persona[]){
+        Persona personaNoNull[] = personasNoNull(persona);
+        Arrays.sort(personaNoNull, (a, b) -> String.valueOf(a.getEdad()).compareTo(String.valueOf(b.getEdad())));
+        return personaNoNull;
+    }
+    public Persona[] personasNoNull(Persona persona[]){
+        int i = 0;
+        while (persona[i] != null)
+            i++;
+        Persona personasNoNull[] = new Persona[i];
+
+        int p = 0;
+        while(personasNoNull.length > p) {
+            personasNoNull[p] = persona[p];
+            p++;
+        }
+        return personasNoNull;
     }
 }
