@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.Scanner;
 
 public class Menu {
@@ -97,7 +96,6 @@ public class Menu {
             switch (i){
                 case 0:
                     System.out.println("Escribe el nombre");
-                    //scan.nextLine();
                     nombre = scan.nextLine();
                     break;
                 case 1:
