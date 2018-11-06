@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600"
+			   initialize="init();">
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			import mx.controls.DateField;
+			import mx.formatters.DateBase;
+			import mx.skins.spark.DateChooserTodayIndicatorSkin;
+			
+			import spark.events.IndexChangeEvent;
+			public var acumulacionApuesta:Number = 0;
+			
+			
+			public function init():void 
+			{
+				jugadores.dataProvider = new ArrayCollection([{label: "R. MADRID"}, {label:"BARCELONA"}, {label: "AT. MADRID"}, {label:"SEVILLA"},{label:"VALENCIA"}]);
+				equipos.dataProvider = new ArrayCollection([{label:"R. NADAL"},{label:"R. FEDERER"},{label:"N. DJOKOVIC"},{label:"A. ZVEREV"}, {label:"M. CILIC"}]);
+			}
+
+			protected function chckFutbol_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				equipos.enabled = chckFutbol.selected;
+			}
+			
+			protected function chckTenis_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				jugadores.enabled = chckTenis.selected;
+			}
+			
+			protected function equipos_changeHandler(event:IndexChangeEvent):void
+			{
+				// TODO Auto-generated method stub
+				areaApuesta.text += equipos.selectedItem.label + " => " + opcionApuesta("equipos")+"€\n";
+				acumulacionApuesta += opcionApuesta("equipos");
+				acumulacion.text = acumulacionApuesta.toString();
+				equipos.dataProvider.removeItemAt(equipos.selectedIndex);
+			}
+			public function opcionApuesta(str:String):Number
+			{
+				if(str == "equipos")
+					return 1.5;
+				else
+					return 2;
+			}
+			
+			protected function jugadores_changeHandler(event:IndexChangeEvent):void
+			{
+				// TODO Auto-generated method stub
+				areaApuesta.text += jugadores.selectedItem.label + " => " + opcionApuesta("jugadores")+"€\n";
+				acumulacionApuesta += opcionApuesta("jugadores");
+				acumulacion.text = acumulacionApuesta.toString(); 
+				jugadores.dataProvider.removeItemAt(jugadores.selectedIndex);
+			}
+			
+			protected function apostar_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub				
+				ganancia.text = apostarConAcumulacion(acumulacionApuesta).toString();
+				var todaysDate:Date = new Date();
+				
+				var str:String =  todaysDate.date.toString() + "/" + todaysDate.month.toString() + "/" + todaysDate.fullYear.toString();
+								
+				if((cantidad.value != 0 && ganancia.text != "0")){					
+					if(paypal.selected)						
+						Alert.show("Dia de la apuesta: " + str + "\n" + "Forma de pago: Se accederá a su cuenta de Paypal" , "Su apuesta", mx.controls.Alert.OK);
+					if(tarjeta.selected)
+						Alert.show("Dia de la apuesta: " + str + "\n" + "Forma de pago: Se accederá a la pasarela de pago" , "Su apuesta", mx.controls.Alert.OK);
+				}
+				else
+					Alert.show("La apuesta no es válida. Debe ser revisada." , "Su apuesta", mx.controls.Alert.OK);
+				
+			}
+			public function apostarConAcumulacion(acumulacion:Number):Number
+			{
+				return acumulacionApuesta * cantidad.value;
+			}
+			
+			protected function cancelar_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				init();
+				acumulacion.text = "0";
+				cantidad.value = 0;
+				ganancia.text = "0";
+				chckFutbol.selected = false;
+				chckTenis.selected = false;
+				jugadores.enabled = false;
+				equipos.enabled = false;
+				areaApuesta.text = "";
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<s:RadioButtonGroup id="radiogroup1"/>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:Label x="52" y="54" text="Forma de pago:"/>
+	<s:HGroup x="52" y="74">
+		<s:RadioButton id="paypal" label="Paypal" groupName="radiogroup1" selected="true"/>
+		<s:RadioButton id="tarjeta" label="Tarjeta" groupName="radiogroup1"/>
+	</s:HGroup>
+	<s:CheckBox id="chckFutbol" x="52" y="100" label="Equipos de FUTBOL"
+				click="chckFutbol_clickHandler(event)"/>
+	<s:CheckBox id="chckTenis" x="52" y="126" label="Jugadores de TENIS"
+				click="chckTenis_clickHandler(event)"/>
+	<s:Label x="229" y="54" text="Cantidad (€):"/>
+	<s:Label x="229" y="80" text="Ganancia (€):"/>
+	<s:NumericStepper id="cantidad" x="317" y="43"/>
+	<s:TextInput id="ganancia" x="317" y="81" width="53" editable="false" text="0"/>
+	<s:Button id="apostar" x="393" y="43" label="Apostar" click="apostar_clickHandler(event)"/>
+	<s:Button id="cancelar" x="392" y="82" label="Cancelar" click="cancelar_clickHandler(event)"/>
+	<s:Label x="229" y="126" text="Acumulacion apuesta (€):"/>
+	<s:TextInput id="acumulacion" x="378" y="126" width="85" editable="false" text="0"/>
+	<s:Label x="52" y="170" text="Selecciona:"/>
+	<s:Label x="180" y="170" text="Selecciona:"/>
+	<s:Label x="307" y="170" text="Mi Apuesta:"/>
+	<s:List id="equipos" x="52" y="190" width="117" height="169"
+			change="equipos_changeHandler(event)" enabled="false"></s:List>
+	<s:List id="jugadores" x="180" y="190" width="117" height="169"
+			change="jugadores_changeHandler(event)" enabled="false"></s:List>
+	<s:TextArea id="areaApuesta" x="307" y="190" height="169"/>
+	
+</s:Application>

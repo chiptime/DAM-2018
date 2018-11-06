@@ -51,7 +51,8 @@
 			protected function btn3_clickHandler(event:MouseEvent):void
 			{
 				// TODO Auto-generated method stub			
-				Alert.show("Lo sentimos esta en construcción", "Error", mx.controls.Alert.OK);		
+				//Alert.show("Lo sentimos esta en construcción", "Error", mx.controls.Alert.OK);
+				
 			}
 			
 			protected function label1_clickHandler(event:MouseEvent):void
@@ -102,7 +103,7 @@
 			{
 				// TODO Auto-generated method stub
 				resetRandom();
-				textTest.text = randNum.toString();
+				//textTest.text = randNum.toString();
 				if(usuarioRecuerdame != null && randNum < 50 && randNum > 10 ){
 					loginUser.text = usuarioRecuerdame.getCorreo();
 					loginPass.text = usuarioRecuerdame.getContrasenia();
@@ -175,7 +176,7 @@
 					Alert.show("Vaya me han detectado alzheimer, mejor no te fies mucho", 
 						"De baja por problemas de salud", mx.controls.Alert.OK);
 					resetRandom();
-					textTest.text = randNum.toString();
+					//textTest.text = randNum.toString();
 					if(randNum < 50 && randNum > 10 || usuario != null)
 						usuarioRecuerdame = new Usuario(usuario.getNombre(), usuario.getCorreo(), usuario.getCorreo());						
 				}
@@ -394,7 +395,7 @@
 				 text="El usuario o la contraseña son incorrectas"/>
 		<s:Label id="areaPruebas" visible="false" x="38" y="56" width="197" height="121"
 				 text="Quizas esto te ayude..."/>
-		<s:TextInput id="textTest" x="387" y="539"/>
+		<!-- <s:TextInput id="textTest" x="387" y="539"/> -->
 		
 	</s:Group>
 	
