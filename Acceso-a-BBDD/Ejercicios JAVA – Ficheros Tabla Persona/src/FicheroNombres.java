@@ -23,6 +23,7 @@ public class FicheroNombres {
                 freader = new FileReader(fichero);
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
+                System.out.println("El archivo no se encuentra");
             }
         }
     }
@@ -95,19 +96,21 @@ public class FicheroNombres {
         try {
             char[] numeros_diez = new char[600];
             String loDelArray = "";
+            int resultado;
+                    if(freader == null)
+                        System.out.println("algo ha salido mal");
+                    else {
+                        resultado = freader.read(numeros_diez);
+                        int comprobante = 0;
 
-
-            int resultado = freader.read(numeros_diez);
-            int comprobante = 0;
-
-            while (resultado != -1) {
-                comprobante += resultado;
-                resultado = freader.read(numeros_diez);
-            }
-
-            loDelArray = charToStrings(loDelArray, numeros_diez, comprobante);
-            stringToArrayString(loDelArray, losNombres);
-            freader.close();
+                        while (resultado != -1) {
+                            comprobante += resultado;
+                            resultado = freader.read(numeros_diez);
+                        }
+                        loDelArray = charToStrings(loDelArray, numeros_diez, comprobante);
+                        stringToArrayString(loDelArray, losNombres);
+                        freader.close();
+                    }
         } catch (IOException e) {
             e.printStackTrace();
         }

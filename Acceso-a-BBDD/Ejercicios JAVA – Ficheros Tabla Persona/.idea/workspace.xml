@@ -2,11 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="167d93e3-7b6a-446c-9039-8546520e696c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Ejercicio Personas/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ejercicio Personas/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ejercicio Personas/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ejercicio Personas/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ejercicio Personas/Ejercicio Personas.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ejercicio Personas/src/Ficheros.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ejercicio Personas/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ejercicio Personas/src/Manejador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ejercicio Personas/src/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ejercicio Personas/src/Persona.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Ejercicios JAVA – Ficheros Tabla Persona/FicheroNombres.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ejercicios JAVA – Ficheros Tabla Persona/FicheroNombres.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ejercicios JAVA – Ficheros Tabla Persona/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ejercicios JAVA – Ficheros Tabla Persona/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Ejercicios JAVA – Ficheros Tabla Persona/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ejercicios JAVA – Ficheros Tabla Persona/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ejercicios JAVA – Ficheros Tabla Persona/Persona.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ejercicios JAVA – Ficheros Tabla Persona/Persona.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FicheroNombres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FicheroNombres.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -52,34 +62,37 @@
     <session id="2064447883">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.0" value="2" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1033" />
-          <entry key="txt" value="44" />
+          <entry key="java" value="1262" />
+          <entry key="txt" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1033" />
-          <entry key="PLAIN_TEXT" value="44" />
+          <entry key="JAVA" value="1262" />
+          <entry key="PLAIN_TEXT" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="iml" value="1" />
-          <entry key="java" value="2" />
+          <entry key="java" value="3" />
           <entry key="txt" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="2" />
+          <entry key="JAVA" value="3" />
           <entry key="PLAIN_TEXT" value="4" />
         </counts>
       </usages-collector>
@@ -88,14 +101,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Persona.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="489">
+              <caret line="46" column="58" selection-start-line="46" selection-start-column="58" selection-end-line="46" selection-end-column="58" />
+              <folding>
+                <element signature="e#964#965#0" expanded="true" />
+                <element signature="e#1041#1042#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FicheroNombres.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-916">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="405">
+              <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
               <folding>
                 <element signature="method#FicheroNombres#0;class#FicheroNombres#0" />
-                <element signature="method#abrir#0;class#FicheroNombres#0" />
-                <element signature="method#seleccionarCampo#0;class#FicheroNombres#0" />
                 <element signature="method#stringToArrayString#0;class#FicheroNombres#0" />
                 <element signature="method#charToStrings#0;class#FicheroNombres#0" />
               </folding>
@@ -106,33 +130,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Menu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="71" column="60" selection-start-line="71" selection-start-column="60" selection-end-line="71" selection-end-column="60" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#Menu#0;class#Menu#0" />
-                <element signature="method#escribirNombres#0;class#Menu#0" />
-                <element signature="method#escribirApellidos#0;class#Menu#0" />
-                <element signature="method#escribirNombresMayores#0;class#Menu#0" />
-              </folding>
+            <state relative-caret-position="110">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/TimSort.java">
+        <entry file="file://$PROJECT_DIR$/src/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="355" selection-start-line="355" selection-end-line="355" />
+            <state relative-caret-position="2772">
+              <caret line="133" column="67" selection-start-line="133" selection-start-column="65" selection-end-line="133" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#escribirApellidos#0;class#Menu#0" />
+                <element signature="method#escribirNombresMayores#0;class#Menu#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -156,18 +169,24 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>cerrar</find>
+      <find>write</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/personas.txt" />
         <option value="$PROJECT_DIR$/src/Persona.java" />
         <option value="$PROJECT_DIR$/test.txt" />
-        <option value="$PROJECT_DIR$/src/FicheroNombres.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Menu.java" />
+        <option value="$PROJECT_DIR$/src/FicheroNombres.java" />
       </list>
     </option>
   </component>
@@ -189,9 +208,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Course" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -208,13 +226,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541339883973" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541960687144" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Ejercicio Personas" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -264,7 +283,11 @@
       <updated>1541272871501</updated>
       <workItem from="1541272874274" duration="11768000" />
       <workItem from="1541284723452" duration="108000" />
-      <workItem from="1541330527471" duration="8658000" />
+      <workItem from="1541330527471" duration="8800000" />
+      <workItem from="1541608709928" duration="1198000" />
+      <workItem from="1541709286121" duration="1353000" />
+      <workItem from="1541788841995" duration="3100000" />
+      <workItem from="1541937273470" duration="6197000" />
     </task>
     <task id="LOCAL-00001" summary="Ejercicio 6 Tabla de Personas - Terminado">
       <created>1541339652901</created>
@@ -273,17 +296,31 @@
       <option name="project" value="LOCAL" />
       <updated>1541339652902</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Ejercicio 6 Tabla de Personas - Terminado2">
+      <created>1541339896482</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1541339896482</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Ejercicio 6 Tabla de Personas - Terminado2">
+      <created>1541339966782</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1541339966782</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20534000" />
+    <option name="totallyTimeSpent" value="32524000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2540453" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27022654" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -293,7 +330,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3290993" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3256351" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3256351" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -322,26 +359,21 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Ejercicio 6 Tabla de Personas" />
     <MESSAGE value="Ejercicio 6 Tabla de Personas - Terminado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ejercicio 6 Tabla de Personas - Terminado" />
+    <MESSAGE value="Ejercicio 6 Tabla de Personas - Terminado2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ejercicio 6 Tabla de Personas - Terminado2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Menu.java</url>
-          <line>51</line>
-          <properties />
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Menu.java</url>
-          <line>118</line>
+          <line>116</line>
           <properties />
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Menu.java</url>
-          <line>139</line>
+          <line>137</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
@@ -349,7 +381,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Menu.java</url>
-          <line>146</line>
+          <line>144</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
@@ -357,21 +389,27 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Menu.java</url>
-          <line>160</line>
+          <line>158</line>
           <properties />
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Menu.java</url>
-          <line>138</line>
+          <line>136</line>
           <properties />
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Menu.java</url>
-          <line>67</line>
+          <line>70</line>
           <properties />
-          <option name="timeStamp" value="41" />
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/FicheroNombres.java</url>
+          <line>11</line>
+          <properties />
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -411,9 +449,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Ejercicios JAVA – Ficheros Tabla Persona.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/ana.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -435,24 +470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Persona.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="46" column="58" selection-start-line="46" selection-start-column="58" selection-end-line="46" selection-end-column="58" />
-          <folding>
-            <element signature="e#964#965#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/TimSort.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -460,33 +477,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FicheroNombres.java">
+    <entry file="file://$PROJECT_DIR$/test.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ejercicios JAVA – Ficheros Tabla Persona.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-916">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="110">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2772">
+          <caret line="133" column="67" selection-start-line="133" selection-start-column="65" selection-end-line="133" selection-end-column="67" />
           <folding>
-            <element signature="method#FicheroNombres#0;class#FicheroNombres#0" />
-            <element signature="method#abrir#0;class#FicheroNombres#0" />
-            <element signature="method#seleccionarCampo#0;class#FicheroNombres#0" />
-            <element signature="method#stringToArrayString#0;class#FicheroNombres#0" />
-            <element signature="method#charToStrings#0;class#FicheroNombres#0" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#escribirApellidos#0;class#Menu#0" />
+            <element signature="method#escribirNombresMayores#0;class#Menu#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Menu.java">
+    <entry file="file://$PROJECT_DIR$/src/Persona.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="71" column="60" selection-start-line="71" selection-start-column="60" selection-end-line="71" selection-end-column="60" />
+        <state relative-caret-position="489">
+          <caret line="46" column="58" selection-start-line="46" selection-start-column="58" selection-end-line="46" selection-end-column="58" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Menu#0;class#Menu#0" />
-            <element signature="method#escribirNombres#0;class#Menu#0" />
-            <element signature="method#escribirApellidos#0;class#Menu#0" />
-            <element signature="method#escribirNombresMayores#0;class#Menu#0" />
+            <element signature="e#964#965#0" expanded="true" />
+            <element signature="e#1041#1042#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FicheroNombres.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+          <folding>
+            <element signature="method#FicheroNombres#0;class#FicheroNombres#0" />
+            <element signature="method#stringToArrayString#0;class#FicheroNombres#0" />
+            <element signature="method#charToStrings#0;class#FicheroNombres#0" />
           </folding>
         </state>
       </provider>
