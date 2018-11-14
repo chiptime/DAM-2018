@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9a2e966-d215-4183-8eb2-c7fbe9647ca9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CrearCarpetasArchivos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CrearCarpetasArchivos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejericio Acceso a Datos/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejericio Acceso a Datos/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejericio Acceso a Datos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejericio Acceso a Datos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejericio Acceso a Datos/Ejericio Acceso a Datos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejericio Acceso a Datos/Ejercicio Acceso a Datos.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TablaStrings/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TablaStrings/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 4 - Flex 4 - ChupaChups.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 3-1/bin-debug/Main.swf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 3-1/bin-debug/Main.swf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 3-1/src/Main.mxml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Desarrollo_interfaces/Practica 3-1/src/Main.mxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,9 +16,10 @@
     <session id="1614894815">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.169" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -77,7 +73,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
+            <state relative-caret-position="119">
               <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
             </state>
           </provider>
@@ -86,7 +82,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Carpeta.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
+            <state relative-caret-position="238">
               <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
             </state>
           </provider>
@@ -95,7 +91,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
+            <state relative-caret-position="34">
               <caret line="2" selection-start-line="2" selection-end-line="4" selection-end-column="14" />
             </state>
           </provider>
@@ -175,16 +171,16 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Course" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540370771501" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CrearCarpetasArchivos" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Ejercicios JAVA – Ficheros Tabla Persona" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -232,9 +228,9 @@
     <option name="totallyTimeSpent" value="772000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12702265" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12846482" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -273,21 +269,21 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
+        <state relative-caret-position="119">
           <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Carpeta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
+        <state relative-caret-position="238">
           <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
+        <state relative-caret-position="34">
           <caret line="2" selection-start-line="2" selection-end-line="4" selection-end-column="14" />
         </state>
       </provider>

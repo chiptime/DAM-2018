@@ -1,0 +1,6 @@
+d:\bruno\documents\visual studio 2015\Projects\Restaurante\Restaurante\bin\Debug\Restaurante.exe.config
+D:\Bruno\Documents\Visual Studio 2015\Projects\Restaurante\Restaurante\bin\Debug\Restaurante.exe
+D:\Bruno\Documents\Visual Studio 2015\Projects\Restaurante\Restaurante\bin\Debug\Restaurante.pdb
+D:\Bruno\Documents\Visual Studio 2015\Projects\Restaurante\Restaurante\obj\Debug\Restaurante.csprojResolveAssemblyReference.cache
+D:\Bruno\Documents\Visual Studio 2015\Projects\Restaurante\Restaurante\obj\Debug\Restaurante.exe
+D:\Bruno\Documents\Visual Studio 2015\Projects\Restaurante\Restaurante\obj\Debug\Restaurante.pdb

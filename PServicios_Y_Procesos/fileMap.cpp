@@ -41,7 +41,7 @@ int main (int argc, char* const argv[])
     file_memory = mmap (0, FILE_LENGTH, PROT_WRITE, MAP_SHARED, fd, 0);
     close (fd);
 
-
+    
     for(int i = 0; i < 6; i++){
         sprintf((char*) file_memory + cuadrado_memory, "%s\n", cuadrado[i]);
     cuadrado_memory += strlen(cuadrado[i]) + 1;
