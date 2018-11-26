@@ -1,0 +1,3 @@
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/tanks/build/CMakeFiles/rebuild_cache.dir
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/tanks/build/CMakeFiles/battlecity.dir
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/tanks/build/CMakeFiles/edit_cache.dir
