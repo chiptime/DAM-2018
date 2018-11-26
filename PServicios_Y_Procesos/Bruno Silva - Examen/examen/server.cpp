@@ -28,6 +28,7 @@ void handle_client(int client_fd) {
         else {
             char * texto = (char *) malloc(count * sizeof(char));
             read(client_fd, texto, count * sizeof(char));
+            char *token = strtok(texto, " ");
             //            printf("READ:%s\n", texto);
             int pipes[2];
             pid_t pid;
@@ -41,8 +42,12 @@ void handle_client(int client_fd) {
                 FILE* stream;
                 close (pipes[0]);
                 stream = fdopen (pipes[1], "w");
-                fprintf (stream, STDIN_FILENO);
-                fprintf(stream, texto);//saca texto post sort
+                while(token != NULL) {
+                      fprintf(stream, "%s\n", token);
+                      token =  strtok(NULL, " ");
+                  }
+  ////              fprintf (stream, STDIN_FILENO);
+//                fprintf(stream, texto);//saca texto post sort
                 fflush (stream);
                 close (pipes[1]);
                 waitpid (pid, NULL, 0);
@@ -89,7 +94,7 @@ int main(int argc, char *argv[] ){
     while (next_option != -1);
 
     addr.sin_family = AF_INET;
-    addr.sin_port = htons(8888);
+    addr.sin_port = htons(8877);
     fprintf(stdout,"Estado de loopback: %i\n", loopback);
     if(loopback)
         addr.sin_addr.s_addr = htonl(INADDR_LOOPBACK);

@@ -45,7 +45,6 @@ void handle_client(int client_fd) {
         abort();
     }else {
         printf("%i\n", getpid());
-//      char str[100] = "";
         close (pipes[0]);
         close (pipesExtra[1]);
 
