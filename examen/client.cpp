@@ -10,15 +10,13 @@
 poder enviarle el buffer, recibir su respuesta e imprimirla.*/
 void handle_server(int server_fd) {
 
-    int GRANDE = 0;
-    char buffer[GRANDE] = "";
-
+    char *buffer = (char*) malloc ( sizeof(char)) ;
+    fflush(stdin);
     printf("Escribe algo.\n");
-    scanf("%s", buffer);
-
-    int count = strlen(buffer);
-    write(server_fd, &count, sizeof(int));
-    write(server_fd, buffer, count * sizeof(char));
+    fgets(buffer,40*sizeof(char)  ,stdin);
+    int l = 40* sizeof(char);
+    write(server_fd, &l, sizeof(int));
+    write(server_fd, buffer, 40 * sizeof(char));
 }
 
 int main(){
@@ -48,4 +46,4 @@ cenada en char buffer[GRANDE];*/
 
     close(sock_fd);
     return EXIT_SUCCESS;
-}
+    }
