@@ -10,6 +10,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <errno.h>
+#include <sys/time.h>
 
 #include <locale.h>
 //Local Files
@@ -20,6 +21,7 @@
 #include "../libreria/bullet/bullet.h"
 #include "../libreria/teclas/teclas.h"
 
+#define MAX_CLIENTS 10
 
 /*Comienza creando un servidor básico INET orientado a conexión que sea capaz de
   escuchar bien en INADDR_LOOPBACK o en INADDR_ANY, según se especifique la op-
@@ -29,9 +31,6 @@
 const char* program_name;
 
 void handle_client(int client_fd) {
-    //  int count;
-    //    read(client_fd, &count, sizeof(int));
-    //  char * texto = (char *) malloc(count * sizeof(char));
     int tecla = 0;
     struct Tanks tank1;
     struct Bullets bullet1;
@@ -42,17 +41,14 @@ void handle_client(int client_fd) {
 
         teclas(&tank1, &bullet1, tecla);
 
-        read(client_fd, &tank1, sizeof(tank1));
-        read(client_fd, &bullet1, sizeof(bullet1));
-        read(client_fd, &tecla, sizeof(int));
- 
-        system("clear");
+        write(client_fd, &tank1, sizeof(tank1));
+        write(client_fd, &bullet1, sizeof(bullet1));
+
+   /*     system("clear");
         printf("Hemos recibido la tecla: %i\r\n", tecla);
         printf("Posición tanque: %f + %f  \r\n",tank1.position.x,tank1.position.y);
         printf("Posición bala: %f + %f\r\n",bullet1.position.x,bullet1.position.y);
-
-
-        //    teclas();
+        */
     }while(tecla != 276);
     close(client_fd);
 
@@ -108,16 +104,20 @@ void handle_client(int client_fd) {
   la Santa Comparsa; que es española y da mucho más miedo).*/
 int main(int argc, char *argv[] ){
     int sock_fd = socket(AF_INET,SOCK_STREAM,0);
-    int loopback = 0, port = 0;
+    int loopback = 0, port = 0, sd, max_fds, activity;
     struct sockaddr_in addr;
+    fd_set read_fds;
     int next_option;
+    int client_fd[MAX_CLIENTS];
     const struct option long_options[] = {
         { "port",       0, NULL, 'p' },
         { "loopback",   0, NULL, 'l' },
         { NULL,         0, NULL,  0  }
     };
-    //    struct Tanks tanks[10];
 
+    //    struct Tanks tanks[10];
+    for(int i = 0; i < MAX_CLIENTS;  i++)
+        client_fd[i] = 0;
 
     memset(&addr, 0, sizeof(addr));
     program_name = argv[0];
@@ -159,24 +159,85 @@ int main(int argc, char *argv[] ){
         fprintf(stdout, "He hecho un bind a %i\n", (int) addr.sin_addr.s_addr  );
 
     listen(sock_fd, 3);
-
     do {
+        FD_ZERO(&read_fds);
         socklen_t size = sizeof(addr);
-        int client_fd = accept(sock_fd, (struct sockaddr *) &addr, &size);
+        FD_SET(sock_fd, &read_fds);
+        max_fds = sock_fd;
 
+        for(int i=0; i < MAX_CLIENTS; i++){
+            sd = client_fd[i];
+            if(sd > 0)
+                FD_SET(sd, &read_fds);
+            if(sd > max_fds)
+                max_fds = sd;
+        }
+
+        activity = select(max_fds + 1, &read_fds, NULL, NULL, NULL);
+
+        if(FD_ISSET(sock_fd, &read_fds)){
+            int new_socket = accept(sock_fd, (struct sockaddr *) &addr, &size);
+            for(int i = 0; i < MAX_CLIENTS; i++)
+                if(client_fd[i] == 0){
+                    client_fd[i] = new_socket;
+                    printf("Adding to list of sockets as %d\n" , i);
+                    break;
+                }
+        }
+        for(int i = 0; i < MAX_CLIENTS; i++){
+            sd = client_fd[i];
+
+            if(FD_ISSET(sd, &read_fds)){
+
+            pid_t child_pid;
+            child_pid = fork ();
+            if (child_pid == 0) {//proceso hijo
+                close(sock_fd);
+                handle_client(client_fd[i]);
+                getpeername(sd, (struct sockaddr*) &addr, &size);
+                printf("Host disconnected , ip %s , port %d \n" ,
+                        inet_ntoa(addr.sin_addr) , ntohs(addr.sin_port));
+                close(sd);
+                client_fd[i] = 0;
+
+                exit(0);
+            }
+            else if (child_pid > 0) {//proceso padre
+                close(client_fd[i]);
+                waitpid(child_pid,0,0);
+            }
+            }
+        }
+    } while(true);
+    close(sock_fd);
+    return EXIT_SUCCESS;
+}
+
+
+            /*
+            if(int valread = read(sd, buffer, 1024) == 0){
+                    getpeername(sd, (struct sockaddr*) &addr, &size);
+                    printf("Host disconnected , ip %s , port %d \n" ,
+                            inet_ntoa(address.sin_addr) , ntohs(address.sin_port));
+                    close(sd);
+                    client_fd[i] = 0;
+                }else{
+                    buffer[valread] = '\0';
+                    send(sd, buffer, strlen(buffer), 0);
+                }
+            }
+        }
+*/
+/*
         pid_t child_pid;
         child_pid = fork ();
         if (child_pid == 0) {//proceso hijo
             close(sock_fd);
             handle_client(client_fd);
             exit(0);
-            printf("LOL");
         }
         else if (child_pid > 0) {//proceso padre
             close(client_fd);
             waitpid(child_pid,0,0);
         }
-    } while(true);
-    close(sock_fd);
-    return EXIT_SUCCESS;
-}
+        */
