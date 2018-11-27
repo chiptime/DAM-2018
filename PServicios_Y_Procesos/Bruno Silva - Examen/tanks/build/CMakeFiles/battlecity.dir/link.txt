@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/battlecity.dir/battlecity.cpp.o CMakeFiles/battlecity.dir/ncurses/ncurses.cpp.o CMakeFiles/battlecity.dir/mapa/mapa.cpp.o CMakeFiles/battlecity.dir/tank/tank.cpp.o CMakeFiles/battlecity.dir/global/global.cpp.o CMakeFiles/battlecity.dir/bullet/bullet.cpp.o CMakeFiles/battlecity.dir/teclas/teclas.cpp.o  -o battlecity -lncursesw 
