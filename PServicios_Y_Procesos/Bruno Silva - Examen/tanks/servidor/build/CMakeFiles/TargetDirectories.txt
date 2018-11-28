@@ -1,0 +1,3 @@
+/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/tanks/servidor/build/CMakeFiles/rebuild_cache.dir
+/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/tanks/servidor/build/CMakeFiles/server.dir
+/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/tanks/servidor/build/CMakeFiles/edit_cache.dir

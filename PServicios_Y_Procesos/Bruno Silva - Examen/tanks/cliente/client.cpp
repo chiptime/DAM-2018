@@ -73,6 +73,7 @@ int main(){
     }
     finalizar_Curses();
 
+    printf("Estamos desconectando\n");
     // printf("Esta recibiendo: %i\n", i);
     //printf("ESTO ESTAMOS RECIBIENDO:%s\n\n", str);
     close(sock_fd);

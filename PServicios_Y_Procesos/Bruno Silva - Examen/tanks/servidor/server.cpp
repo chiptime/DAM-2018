@@ -30,6 +30,11 @@
   levantar el servidor.*/
 const char* program_name;
 
+   /*     system("clear");
+        printf("Hemos recibido la tecla: %i\r\n", tecla);
+        printf("Posición tanque: %f + %f  \r\n",tank1.position.x,tank1.position.y);
+        printf("Posición bala: %f + %f\r\n",bullet1.position.x,bullet1.position.y);
+        */
 void handle_client(int client_fd) {
     int tecla = 0;
     struct Tanks tank1;
@@ -44,59 +49,8 @@ void handle_client(int client_fd) {
         write(client_fd, &tank1, sizeof(tank1));
         write(client_fd, &bullet1, sizeof(bullet1));
 
-   /*     system("clear");
-        printf("Hemos recibido la tecla: %i\r\n", tecla);
-        printf("Posición tanque: %f + %f  \r\n",tank1.position.x,tank1.position.y);
-        printf("Posición bala: %f + %f\r\n",bullet1.position.x,bullet1.position.y);
-        */
     }while(tecla != 276);
     close(client_fd);
-
-    /*    int pipes[2];
-          int pipesExtra[2];
-          pid_t pid;
-
-          read(client_fd, texto, count * sizeof(char));
-          char *token = strtok(texto, " ");
-          pipe (pipes);
-          pipe (pipesExtra);
-          pid = fork ();
-          if (pid == (pid_t) 0) {
-          close(client_fd);
-          close (pipes[1]);
-          close (pipesExtra[0]);
-
-          dup2 (pipes[0], STDIN_FILENO);
-          dup2 (pipesExtra[1], STDOUT_FILENO);
-          execlp ("sort", "sort", NULL);
-          fprintf(stderr, "FALLO AL EJECUTAR");
-          close (pipes[0]);
-          close (pipesExtra[1]);
-          abort();
-          }else {
-          printf("%i\n", getpid());
-          close (pipes[0]);
-          close (pipesExtra[1]);
-
-          while(token != NULL) {
-          write(pipes[1], token, strlen(token) );
-          strcpy(token, "\n");
-          write(pipes[1], token, strlen(token) );
-          token =  strtok(NULL, " ");
-          }
-          close(pipes[1]);
-
-          read(pipesExtra[0], texto, 100 * sizeof(char));
-
-          int num = strlen(texto);
-          write(client_fd, &num, sizeof(num));
-
-          write(client_fd, texto, num * sizeof(char));
-          close(pipesExtra[0]);
-          waitpid (pid, NULL, 0);
-
-          }
-          */
 }
 
 /*Mejora el programa anterior para que cada conexión entrante sea atendida en un sub-
@@ -159,6 +113,7 @@ int main(int argc, char *argv[] ){
         fprintf(stdout, "He hecho un bind a %i\n", (int) addr.sin_addr.s_addr  );
 
     listen(sock_fd, 3);
+
     do {
         FD_ZERO(&read_fds);
         socklen_t size = sizeof(addr);
@@ -180,9 +135,10 @@ int main(int argc, char *argv[] ){
             for(int i = 0; i < MAX_CLIENTS; i++)
                 if(client_fd[i] == 0){
                     client_fd[i] = new_socket;
-                    printf("Adding to list of sockets as %d\n" , i);
+                    printf("Adding to list of sockets as %i\n" , i);
                     break;
-                }
+                }else
+                    printf("Socket ya agregado %i\n", i);
         }
         for(int i = 0; i < MAX_CLIENTS; i++){
             sd = client_fd[i];
@@ -197,7 +153,7 @@ int main(int argc, char *argv[] ){
                 getpeername(sd, (struct sockaddr*) &addr, &size);
                 printf("Host disconnected , ip %s , port %d \n" ,
                         inet_ntoa(addr.sin_addr) , ntohs(addr.sin_port));
-                close(sd);
+                close(client_fd[i]);
                 client_fd[i] = 0;
 
                 exit(0);
