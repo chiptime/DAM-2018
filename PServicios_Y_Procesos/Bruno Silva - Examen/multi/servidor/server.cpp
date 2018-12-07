@@ -11,7 +11,7 @@
 #include <sys/wait.h>
 #include <errno.h>
 #include <sys/time.h>
-
+#include <uuid/uuid.h>
 #include <locale.h>
 //Local Files
 #include "../libreria/global/global.h"
@@ -21,53 +21,45 @@
 #include "../libreria/bullet/bullet.h"
 #include "../libreria/teclas/teclas.h"
 
-#define MAX_CLIENTS 10
+#define MAX_CLIENTS 3
 
-/*Comienza creando un servidor básico INET orientado a conexión que sea capaz de
-  escuchar bien en INADDR_LOOPBACK o en INADDR_ANY, según se especifique la op-
-  ción -l (–loopback) o no en la invocación en línea de comandos. Sí, INADDR_ANY es
-  por defecto (léase con voz de Ángel). Permite que el puerto lo especifique el usario al
-  levantar el servidor.*/
 const char* program_name;
+struct Tanks tank[MAX_CLIENTS];
 
-/*     system("clear");
-       printf("Hemos recibido la tecla: %i\r\n", tecla);
-       printf("Posición tanque: %f + %f  \r\n",tank1.position.x,tank1.position.y);
-       printf("Posición bala: %f + %f\r\n",bullet1.position.x,bullet1.position.y);
-       */
-void handle_client(int client_fd) {
+void handle_client(int client_fd, int *count) {
     int tecla = 0;
-    struct Tanks tank1;
+    int contador = *count - 1;
     struct Bullets bullet1;
     do{
-        read(client_fd, &tank1, sizeof(tank1));
         read(client_fd, &bullet1, sizeof(bullet1));
         read(client_fd, &tecla, sizeof(int));
-
-        teclas(&tank1, &bullet1, tecla);
-
-        write(client_fd, &tank1, sizeof(tank1));
+        for(int i = 0; i < MAX_CLIENTS+1; i++){
+            printf("La posicion del tanke (%i) es : X = %i, Y = %i \n", i, (int) tank[i].position.x, (int)tank[i].position.y);
+            if(tank[i].id == contador)
+                teclas(&tank[i], &bullet1, tecla);
+        }
+        write(client_fd, tank, MAX_CLIENTS * sizeof(Tanks));
         write(client_fd, &bullet1, sizeof(bullet1));
-
+        printf("El numero de cliente es: %i y el id del tanke es: %i\n", *count, tank[*count].id );
+    //    sleep(1);
     }while(tecla != 276);
+  //  count -= 1;
     close(client_fd);
 }
-
-/*Mejora el programa anterior para que cada conexión entrante sea atendida en un sub-
-  proceso nuevo, y que este último no quede zombie. (Que para Halloween ya tenemos
-  la Santa Comparsa; que es española y da mucho más miedo).*/
 int main(int argc, char *argv[] ){
     int sock_fd = socket(AF_INET,SOCK_STREAM,0);
     int loopback = 0, port = 0;
     struct sockaddr_in addr;
     int next_option;
     int client_fd;
+    int countClient = 0;
     const struct option long_options[] = {
         { "port",       0, NULL, 'p' },
         { "loopback",   0, NULL, 'l' },
         { NULL,         0, NULL,  0  }
     };
-    struct Tanks tanks[MAX_CLIENTS];
+    //struct Tanks tank;
+    struct Bullets bullet1;
 
     memset(&addr, 0, sizeof(addr));
     program_name = argv[0];
@@ -113,18 +105,18 @@ int main(int argc, char *argv[] ){
     do {
         socklen_t size = sizeof(addr);
         client_fd = accept(sock_fd, (struct sockaddr *) &addr, &size);
+        tank[countClient++].id = countClient;
         pid_t child_pid;
         child_pid = fork ();
         if (child_pid == 0) {//proceso hijo
             close(sock_fd);
-            handle_client(client_fd);
+            handle_client(client_fd, &countClient);
             close(client_fd);
             client_fd = 0;
             exit(0);
         }
         else if (child_pid > 0) {//proceso padre
-            close(client_fd);
-    //        waitpid(child_pid,0,0);
+//            close(client_fd);
         }
 } while(true);
 close(sock_fd);

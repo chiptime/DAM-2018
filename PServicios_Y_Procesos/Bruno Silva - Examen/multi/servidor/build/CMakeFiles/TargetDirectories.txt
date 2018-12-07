@@ -1,3 +1,3 @@
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/servidor/build/CMakeFiles/rebuild_cache.dir
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/servidor/build/CMakeFiles/server.dir
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/servidor/build/CMakeFiles/edit_cache.dir
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/servidor/build/CMakeFiles/rebuild_cache.dir
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/servidor/build/CMakeFiles/server.dir
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/servidor/build/CMakeFiles/edit_cache.dir

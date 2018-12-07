@@ -6,65 +6,65 @@
 
 #IncludeRegexTransform: 
 
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/bullet/bullet.cpp
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/bullet/bullet.cpp
 bullet.h
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/bullet/bullet.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/bullet/bullet.h
 
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/bullet/bullet.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/bullet/bullet.h
 ../global/global.h
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/global/global.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/global/global.h
 
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/global/global.cpp
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/global/global.cpp
 global.h
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/global/global.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/global/global.h
 
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/global/global.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/global/global.h
 ncurses.h
 -
 global.cpp
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/global/global.cpp
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/global/global.cpp
 
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/mapa/mapa.cpp
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/mapa/mapa.cpp
 mapa.h
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/mapa/mapa.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/mapa/mapa.h
 
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/mapa/mapa.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/mapa/mapa.h
 ../global/global.h
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/global/global.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/global/global.h
 
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/ncurses/ncurses.cpp
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/ncurses/ncurses.cpp
 ncurses.h
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/ncurses/ncurses.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/ncurses/ncurses.h
 
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/ncurses/ncurses.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/ncurses/ncurses.h
 ../global/global.h
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/global/global.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/global/global.h
 
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/tank/tank.cpp
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/tank/tank.cpp
 tank.h
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/tank/tank.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/tank/tank.h
 ncurses.h
 -
 
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/tank/tank.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/tank/tank.h
 ../global/global.h
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/global/global.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/global/global.h
 
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/teclas/teclas.cpp
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/teclas/teclas.cpp
 teclas.h
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/teclas/teclas.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/teclas/teclas.h
 
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/teclas/teclas.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/teclas/teclas.h
 ../global/global.h
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/global/global.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/global/global.h
 ../tank/tank.h
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/tank/tank.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/tank/tank.h
 ../mapa/mapa.h
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/mapa/mapa.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/mapa/mapa.h
 ../bullet/bullet.h
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/bullet/bullet.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/bullet/bullet.h
 
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/servidor/server.cpp
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/servidor/server.cpp
 stdio.h
 -
 stdlib.h
@@ -91,18 +91,20 @@ errno.h
 -
 sys/time.h
 -
+uuid/uuid.h
+-
 locale.h
 -
 ../libreria/global/global.h
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/global/global.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/global/global.h
 ../libreria/mapa/mapa.h
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/mapa/mapa.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/mapa/mapa.h
 ../libreria/ncurses/ncurses.h
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/ncurses/ncurses.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/ncurses/ncurses.h
 ../libreria/tank/tank.h
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/tank/tank.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/tank/tank.h
 ../libreria/bullet/bullet.h
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/bullet/bullet.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/bullet/bullet.h
 ../libreria/teclas/teclas.h
-/home/student/bsilva/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/teclas/teclas.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/teclas/teclas.h
 

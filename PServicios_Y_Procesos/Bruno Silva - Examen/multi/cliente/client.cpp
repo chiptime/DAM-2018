@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <sys/types.h>          /* See NOTES */
+#include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
@@ -15,67 +15,65 @@
 #include "../libreria/tank/tank.h"
 #include "../libreria/bullet/bullet.h"
 #include "../libreria/teclas/teclas.h"
-/*Haz de tu programa un cliente que pueda conectarse a un servidor INET básico para
-  poder enviarle el buffer, recibir su respuesta e imprimirla.*/
-void handle_server(int server_fd, int numTeclas, Tanks t, Bullets b, Tanks *t1, Bullets *b1) {
 
-    write(server_fd, &t,sizeof(t));
+#define MAX_CLIENT 3
+
+void handle_server(int server_fd, int numTeclas, Tanks *t, Bullets b, Bullets *b1) {
     write(server_fd, &b,sizeof(b));
     write(server_fd, &numTeclas, sizeof(int));
     printf("Datos enviados\n");
-    read(server_fd, t1, sizeof(Tanks));
+
+    read(server_fd, t, MAX_CLIENT * sizeof(Tanks));
+    for(int i = 0; i < MAX_CLIENT; i++)
+        printf("Tanks (%i): X = %i, Y = %i\n", i, (int) t[i].position.x, (int) t[i].position.y);
     read(server_fd, b1, sizeof(Bullets));
     printf("Datos recibidos\n");
 }
-
-
-/*Crea un programa –como parte del Cliente Perdido– que lea una lista de palabras
-  separadas por saltos de linea. Dicha lista es será de longitud variable y quedará alma-
-  cenada en char buffer[GRANDE];*/
 int main(){
-    struct Tanks tank1 = {7,7};
+    struct Tanks tank[MAX_CLIENT];
     struct Bullets bullet = {0,0};
     int tecla = -1;
     int sock_fd = socket(AF_INET,SOCK_STREAM,0);
     struct sockaddr_in addr;
+    int dir = 0;
 
+    for(int i = 0; i < MAX_CLIENT; i++)
+      tank[i] = {7,7};
+
+    setlocale(LC_ALL,"");
     memset(&addr, 0, sizeof(addr));
 
     addr.sin_family = AF_INET;
     addr.sin_port = htons(8888);
     addr.sin_addr.s_addr = inet_addr("127.0.0.1");
-
     socklen_t size = sizeof(addr);
 
-    int server_fd = connect(sock_fd, (struct sockaddr *) &addr, size);
+    int server_fd = connect(
+            sock_fd, (struct sockaddr *) &addr, size);
     if(server_fd != -1)
-        handle_server(sock_fd, 666, tank1, bullet, &tank1, &bullet);
+        handle_server(
+                sock_fd, 666, tank, bullet, &bullet);
     else
         printf("No hay nada\n");
-
-    int dir = 0;
-    setlocale(LC_ALL,"");
-
-
     iniciar_Curses();
-    //getmaxyx(stdscr,row,col);
 
-    while(tecla != 276){//teclas(&tank1, &bullet, tecla) != KEY_BREAK){
+    while(tecla != 276){
         clear();
         printMap();
-        printTank(tank1);
-        //        dir = teclas(&tank1, &bullet);
-        printBullet(tank1,&bullet, bullet, dir);
+        for(int i = 0; i <MAX_CLIENT+1;i++){//TODO mejorar algoritmo de id para tankes
+            printTank(tank[i]);//TODO es posible que haya que modificar el pintado para tankes fuera del marco de juego
+        //        dir = teclas(&tank, &bullet);
+            printBullet(tank[i],&bullet, bullet, dir);
+        }
         DEBUG(40-10,0,"dir is %i", dir);
         tecla = getch();
-        handle_server(sock_fd ,tecla, tank1, bullet, &tank1, &bullet);
+        handle_server(
+                sock_fd ,tecla, tank, bullet, &bullet);
         usleep(20000);
+//        sleep(3);
     }
     finalizar_Curses();
-
     printf("Estamos desconectando\n");
-    // printf("Esta recibiendo: %i\n", i);
-    //printf("ESTO ESTAMOS RECIBIENDO:%s\n\n", str);
     close(sock_fd);
     return EXIT_SUCCESS;
 }
