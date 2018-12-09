@@ -12,7 +12,8 @@
 extern "C" {
 #endif
 void tankToBullet(struct Tanks atank, struct Bullets *bullet);
-void printBullet(struct Tanks tbullet, struct Bullets *position_Bullet, struct Bullets position, int checkDirection);
+void printBullet(struct Bullets *position_Bullet, int checkDirection);
+void crashBullet(Client *c);
 
 #ifdef __cplusplus
 }

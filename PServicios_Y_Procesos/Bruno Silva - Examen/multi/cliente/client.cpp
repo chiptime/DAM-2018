@@ -16,29 +16,19 @@
 #include "../libreria/bullet/bullet.h"
 #include "../libreria/teclas/teclas.h"
 
-#define MAX_CLIENT 3
 
-void handle_server(int server_fd, int numTeclas, Tanks *t, Bullets b, Bullets *b1) {
-    write(server_fd, &b,sizeof(b));
+void handle_server(int server_fd, int numTeclas, Client *c){
     write(server_fd, &numTeclas, sizeof(int));
-    printf("Datos enviados\n");
+//    printf("Datos enviados\n");
 
-    read(server_fd, t, MAX_CLIENT * sizeof(Tanks));
-    for(int i = 0; i < MAX_CLIENT; i++)
-        printf("Tanks (%i): X = %i, Y = %i\n", i, (int) t[i].position.x, (int) t[i].position.y);
-    read(server_fd, b1, sizeof(Bullets));
-    printf("Datos recibidos\n");
+    read(server_fd, c, sizeof(Client));
+//    printf("Datos recibidos\n");
 }
 int main(){
-    struct Tanks tank[MAX_CLIENT];
-    struct Bullets bullet = {0,0};
+    struct Client cliente;
     int tecla = -1;
     int sock_fd = socket(AF_INET,SOCK_STREAM,0);
     struct sockaddr_in addr;
-    int dir = 0;
-
-    for(int i = 0; i < MAX_CLIENT; i++)
-      tank[i] = {7,7};
 
     setlocale(LC_ALL,"");
     memset(&addr, 0, sizeof(addr));
@@ -48,11 +38,9 @@ int main(){
     addr.sin_addr.s_addr = inet_addr("127.0.0.1");
     socklen_t size = sizeof(addr);
 
-    int server_fd = connect(
-            sock_fd, (struct sockaddr *) &addr, size);
+    int server_fd = connect(sock_fd, (struct sockaddr *) &addr, size);
     if(server_fd != -1)
-        handle_server(
-                sock_fd, 666, tank, bullet, &bullet);
+        handle_server(sock_fd, 666, &cliente);
     else
         printf("No hay nada\n");
     iniciar_Curses();
@@ -60,17 +48,23 @@ int main(){
     while(tecla != 276){
         clear();
         printMap();
-        for(int i = 0; i <MAX_CLIENT;i++){//TODO mejorar algoritmo de id para tankes
-            printTank(tank[i]);//TODO es posible que haya que modificar el pintado para tankes fuera del marco de juego
-        //        dir = teclas(&tank, &bullet);
-            printBullet(tank[i],&bullet, bullet, dir);
+        for(int i = 0; i <MAX_CLIENTS;i++){
+            printTank(cliente.tank[i]);
+            printBullet(&cliente.tank[i].balas, cliente.tank[i].dir);
+            DEBUG(40+i, 54, "Tank: x=%i, y=%i",(int) cliente.tank[i].position.x,(int) cliente.tank[i].position.y);
+            DEBUG(33+i, 54, "Bullet: x=%i, y=%i",(int) cliente.tank[i].balas.position.x,(int) cliente.tank[i].balas.position.y);
+            DEBUG(40-7-i,0,"Jugador %i, tiene %i Kills",i, cliente.tank[i].kills);
+            if(cliente.tank[cliente.id].die == 1){
+                DEBUG(30,50, "TE MAMASTE WEY");
+                sleep(1);
+            }
+            else
+                DEBUG(30,50, "          ");
+
         }
-        DEBUG(40-10,0,"dir is %i", dir);
         tecla = getch();
-        handle_server(
-                sock_fd ,tecla, tank, bullet, &bullet);
+        handle_server(sock_fd ,tecla, &cliente);
         usleep(20000);
-//        sleep(3);
     }
     finalizar_Curses();
     printf("Estamos desconectando\n");

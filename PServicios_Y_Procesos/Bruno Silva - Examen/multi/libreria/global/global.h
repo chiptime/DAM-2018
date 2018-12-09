@@ -7,6 +7,7 @@
 
 #include <ncurses.h>
 #include "global.cpp"
+#define MAX_CLIENTS 3
 
 #ifdef __cplusplus
 extern "C" {
@@ -29,20 +30,26 @@ struct Block {
     struct Position position;
     bool unbreakable;
 };
-struct Tanks {
-    struct Position position;
-    int id;
-    bool ia;
-};
 struct Bullets {
     struct Position position;
     double dir ;
     int alive = 0;
 };
-/*struct Client {
-    struct Tanks tank;
-    struct Bullets bullet;
-};*/
+struct Tanks {
+    struct Position position;
+    struct Bullets balas;
+    int kills = 0;
+    int die;
+    bool ia;
+    int dir;
+};
+struct Client {
+    struct Tanks tank[MAX_CLIENTS];
+    int count = 0;
+    int id;
+};
+
+
 
 
 #ifdef __cplusplus

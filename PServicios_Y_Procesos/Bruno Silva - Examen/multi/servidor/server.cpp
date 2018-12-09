@@ -23,58 +23,43 @@
 #include "../libreria/bullet/bullet.h"
 #include "../libreria/teclas/teclas.h"
 
-#define MAX_CLIENTS 3
-
-struct Client {
-    struct Tanks tank[MAX_CLIENTS];
-    struct Bullets bullet;
-    int count = 0;
-    int id;
-};
 
 const char* program_name;
-//struct Tanks tank[MAX_CLIENTS];
 struct Client *shared;
 struct Client clientes;
 
 void handle_client(int client_fd) {
     int tecla = 0;
-    struct Bullets bullet1;
-    Client *paraEnviar = shared;
+    for(int i = 0; i <MAX_CLIENTS; i++){
+      shared->tank[i].balas.position.x = 30;
+      shared->tank[i].balas.position.y = 30;
+    }
     do{
-        read(client_fd, &bullet1, sizeof(bullet1));
         read(client_fd, &tecla, sizeof(int));
+
         for(int i = 0; i < MAX_CLIENTS; i++){
             if(clientes.id == i)
-                teclas(&shared->tank[i], &bullet1, tecla);
-            printf("La posicion del tanke (%i) es : X = %i, Y = %i \n",
-                    i, (int) shared->tank[i].position.x, (int)shared->tank[i].position.y);
-
+              shared->tank[i].dir =  teclas(&shared->tank[i], &shared->tank[i].balas, tecla);
+            printBullet(&shared->tank[i].balas, shared->tank[i].dir);
         }
-        write(client_fd, paraEnviar->tank, MAX_CLIENTS * sizeof(Tanks));
-        write(client_fd, &bullet1, sizeof(bullet1));
-        printf("El numero de cliente es: %i y el id del tanke es: %i\n", clientes.count, clientes.id );
-    //    sleep(1);
+        crashBullet(shared);
+        write(client_fd, shared, sizeof(Client));
     }while(tecla != 276);
     close(client_fd);
 }
-int main(int argc, char *argv[] ){
+int main(int argc, char *argv[] ){//TODO implementar sistema de entra salida de jugadores, retirar jugadores al salir
     int sock_fd = socket(AF_INET,SOCK_STREAM,0);
     int loopback = 0, port = 0;
     struct sockaddr_in addr;
     int next_option;
     int client_fd;
-//    int countClient = 0;
-    const struct option long_options[] = {
+    const struct option long_options[] = {//TODO refactorizar, sacar opciones a un archivo externo y permitir elegir la ip
         { "port",       0, NULL, 'p' },
         { "loopback",   0, NULL, 'l' },
         { NULL,         0, NULL,  0  }
     };
-    //struct Tanks tank;
-    struct Bullets bullet1;
 
     memset(&addr, 0, sizeof(addr));
-    program_name = argv[0];
     do {
         next_option = getopt_long (argc, argv, "p:l",
                 long_options, NULL);
@@ -114,25 +99,24 @@ int main(int argc, char *argv[] ){
 
     listen(sock_fd, 3);
 
-    int memoryShared_id = shmget(IPC_PRIVATE, sizeof(Client)*MAX_CLIENTS, IPC_CREAT | IPC_EXCL | S_IRUSR | S_IWUSR);
+    int memoryShared_id = shmget(IPC_PRIVATE, sizeof(Client), IPC_CREAT | IPC_EXCL | S_IRUSR | S_IWUSR);
     shared = (struct Client*) shmat(memoryShared_id, NULL, 0);
-    memcpy(shared->tank, clientes.tank, sizeof(Client));
+    bzero(&clientes, sizeof(Client));
+    memcpy(shared, &clientes, sizeof(Client));
     do {
         socklen_t size = sizeof(addr);
         client_fd = accept(sock_fd, (struct sockaddr *) &addr, &size);
         clientes.id = clientes.count++;
-    //    clientes.tank[countClient++].id = countClient;
         pid_t child_pid;
         child_pid = fork ();
         if (child_pid == 0) {//proceso hijo
             close(sock_fd);
-            handle_client(client_fd);//, &countClient);
+            handle_client(client_fd);
             close(client_fd);
             client_fd = 0;
             exit(0);
         }
         else if (child_pid > 0) {//proceso padre
-//            close(client_fd);
         }
 } while(true);
 close(sock_fd);
