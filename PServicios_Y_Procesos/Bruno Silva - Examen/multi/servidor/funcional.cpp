@@ -29,7 +29,6 @@ struct Client {
     struct Tanks tank[MAX_CLIENTS];
     struct Bullets bullet;
     int count = 0;
-    int id;
 };
 
 const char* program_name;
@@ -37,25 +36,29 @@ const char* program_name;
 struct Client *shared;
 struct Client clientes;
 
-void handle_client(int client_fd) {
+void handle_client(int client_fd, int *count) {
     int tecla = 0;
+    int contador = *count - 1;
     struct Bullets bullet1;
-    Client *paraEnviar = shared;
     do{
+        memcpy(&shared->tank[contador], &clientes.tank[contador],sizeof(Client));
         read(client_fd, &bullet1, sizeof(bullet1));
         read(client_fd, &tecla, sizeof(int));
-        for(int i = 0; i < MAX_CLIENTS; i++){
-            if(clientes.id == i)
-                teclas(&shared->tank[i], &bullet1, tecla);
-            printf("La posicion del tanke (%i) es : X = %i, Y = %i \n",
-                    i, (int) shared->tank[i].position.x, (int)shared->tank[i].position.y);
+        for(int i = 0; i < MAX_CLIENTS+1; i++){
+            printf("La posicion del tanke (%i) es : X = %i, Y = %i \n", i, (int) clientes.tank[i].position.x, (int)clientes.tank[i].position.y);
+            if(clientes.tank[i].id == contador){
+                teclas(&clientes.tank[i], &bullet1, tecla);
+                memcpy(&shared->tank[i], &clientes.tank[i], sizeof(Client));
+            }
 
         }
+        Client *paraEnviar = shared;
         write(client_fd, paraEnviar->tank, MAX_CLIENTS * sizeof(Tanks));
         write(client_fd, &bullet1, sizeof(bullet1));
-        printf("El numero de cliente es: %i y el id del tanke es: %i\n", clientes.count, clientes.id );
-    //    sleep(1);
+        printf("El numero de cliente es: %i y el id del tanke es: %i\n", *count, clientes.tank[contador].id );
+//        sleep(1);
     }while(tecla != 276);
+    count -= 1;
     close(client_fd);
 }
 int main(int argc, char *argv[] ){
@@ -64,7 +67,7 @@ int main(int argc, char *argv[] ){
     struct sockaddr_in addr;
     int next_option;
     int client_fd;
-//    int countClient = 0;
+    int countClient = 0;
     const struct option long_options[] = {
         { "port",       0, NULL, 'p' },
         { "loopback",   0, NULL, 'l' },
@@ -116,17 +119,16 @@ int main(int argc, char *argv[] ){
 
     int memoryShared_id = shmget(IPC_PRIVATE, sizeof(Client)*MAX_CLIENTS, IPC_CREAT | IPC_EXCL | S_IRUSR | S_IWUSR);
     shared = (struct Client*) shmat(memoryShared_id, NULL, 0);
-    memcpy(shared->tank, clientes.tank, sizeof(Client));
+
     do {
         socklen_t size = sizeof(addr);
         client_fd = accept(sock_fd, (struct sockaddr *) &addr, &size);
-        clientes.id = clientes.count++;
-    //    clientes.tank[countClient++].id = countClient;
+        clientes.tank[countClient++].id = countClient;
         pid_t child_pid;
         child_pid = fork ();
         if (child_pid == 0) {//proceso hijo
             close(sock_fd);
-            handle_client(client_fd);//, &countClient);
+            handle_client(client_fd, &countClient);
             close(client_fd);
             client_fd = 0;
             exit(0);

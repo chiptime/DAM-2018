@@ -95,6 +95,10 @@ uuid/uuid.h
 -
 locale.h
 -
+sys/shm.h
+-
+sys/stat.h
+-
 ../libreria/global/global.h
 /home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/global/global.h
 ../libreria/mapa/mapa.h

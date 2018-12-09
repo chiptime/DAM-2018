@@ -60,7 +60,7 @@ int main(){
     while(tecla != 276){
         clear();
         printMap();
-        for(int i = 0; i <MAX_CLIENT+1;i++){//TODO mejorar algoritmo de id para tankes
+        for(int i = 0; i <MAX_CLIENT;i++){//TODO mejorar algoritmo de id para tankes
             printTank(tank[i]);//TODO es posible que haya que modificar el pintado para tankes fuera del marco de juego
         //        dir = teclas(&tank, &bullet);
             printBullet(tank[i],&bullet, bullet, dir);

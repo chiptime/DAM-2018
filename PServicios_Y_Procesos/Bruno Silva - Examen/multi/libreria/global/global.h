@@ -39,6 +39,10 @@ struct Bullets {
     double dir ;
     int alive = 0;
 };
+/*struct Client {
+    struct Tanks tank;
+    struct Bullets bullet;
+};*/
 
 
 #ifdef __cplusplus
