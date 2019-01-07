@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/example.dir/example.cpp.o CMakeFiles/example.dir/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno_Silva_-_Examen/cmake_prueba/libreria/framebuffer/png.cpp.o CMakeFiles/example.dir/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno_Silva_-_Examen/cmake_prueba/libreria/framebuffer/sprite_render.cpp.o  -o example -lpng 

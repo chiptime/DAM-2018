@@ -9,7 +9,48 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54b8819d-a4cc-4081-a8e0-b1075f4603dd" name="Default Changelist" comment="" />
+    <list default="true" id="54b8819d-a4cc-4081-a8e0-b1075f4603dd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/framebuffer/other/c-programs/renderer/client/example" beforeDir="false" afterPath="$PROJECT_DIR$/Bruno Silva - Examen/framebuffer/other/c-programs/renderer/client/example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/framebuffer/other/c-programs/renderer/client/example.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Bruno Silva - Examen/framebuffer/other/c-programs/renderer/client/example.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/framebuffer/other/c-programs/renderer/client/font_render.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/framebuffer/other/c-programs/renderer/client/font_render.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/framebuffer/other/c-programs/renderer/client/png.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Bruno Silva - Examen/framebuffer/other/c-programs/renderer/client/png.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/framebuffer/other/c-programs/renderer/client/sprite.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/framebuffer/other/c-programs/renderer/client/sprite_render.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Bruno Silva - Examen/framebuffer/other/c-programs/renderer/client/sprite_render.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/framebuffer/other/c-programs/renderer/server/server" beforeDir="false" afterPath="$PROJECT_DIR$/Bruno Silva - Examen/framebuffer/other/c-programs/renderer/server/server" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/client.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/client.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/client.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/client.dir/client.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/client.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/client.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/client.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/client.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/client.dir/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno_Silva_-_Examen/multi/libreria/bullet/bullet.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/client.dir/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno_Silva_-_Examen/multi/libreria/global/global.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/client.dir/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno_Silva_-_Examen/multi/libreria/mapa/mapa.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/client.dir/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno_Silva_-_Examen/multi/libreria/ncurses/ncurses.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/client.dir/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno_Silva_-_Examen/multi/libreria/tank/tank.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/client.dir/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno_Silva_-_Examen/multi/libreria/teclas/teclas.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/client.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/client.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/build/client" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/client.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Bruno Silva - Examen/multi/cliente/client.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/libreria/bullet/bullet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Bruno Silva - Examen/multi/libreria/bullet/bullet.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/servidor/build/CMakeFiles/server.dir/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno_Silva_-_Examen/multi/libreria/bullet/bullet.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/Bruno Silva - Examen/multi/servidor/build/CMakeFiles/server.dir/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno_Silva_-_Examen/multi/libreria/bullet/bullet.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/servidor/build/CMakeFiles/server.dir/server.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/Bruno Silva - Examen/multi/servidor/build/CMakeFiles/server.dir/server.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/servidor/build/server" beforeDir="false" afterPath="$PROJECT_DIR$/Bruno Silva - Examen/multi/servidor/build/server" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bruno Silva - Examen/multi/servidor/server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Bruno Silva - Examen/multi/servidor/server.cpp" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,11 +61,12 @@
     <session id="171218757">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -88,7 +130,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Bruno Silva - Examen/cmake prueba" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -115,16 +157,17 @@
       <workItem from="1538931857553" duration="428000" />
       <workItem from="1539279416115" duration="154000" />
       <workItem from="1542750402411" duration="599000" />
+      <workItem from="1546564603586" duration="38000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1181000" />
+    <option name="totallyTimeSpent" value="1219000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1280" height="894" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25364667" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25769854" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />

@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="example" targetName="example" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f91b7277-5a41-4f10-b262-bc74eda63086" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/3.9.1/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/3.9.1/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/3.9.1/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/3.9.1/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/3.9.1/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/3.9.1/CompilerIdC/a.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/3.9.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/3.9.1/CompilerIdCXX/a.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/Makefile2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/example.dir/CXX.includecache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/example.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/example.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/example.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/example.dir/depend.internal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/example.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/example.dir/example.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/example.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/example.dir/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno_Silva_-_Examen/multi/libreria/framebuffer/png.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/example.dir/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno_Silva_-_Examen/multi/libreria/framebuffer/sprite_render.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/example.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/example.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/feature_tests.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/feature_tests.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/feature_tests.cxx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/CMakeFiles/progress.marks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/build/example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/png.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/png.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/png.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/sprite_render.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/sprite_render.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente/sprite_render.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../multi/cliente/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/3.9.1/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/3.9.1/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/3.9.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/3.9.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/3.9.1/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/3.9.1/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/3.9.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/3.9.1/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/client.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/client.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/client.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/client.dir/client.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/client.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/client.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/client.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/client.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/client.dir/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno_Silva_-_Examen/multi/libreria/bullet/bullet.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/client.dir/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno_Silva_-_Examen/multi/libreria/global/global.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/client.dir/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno_Silva_-_Examen/multi/libreria/mapa/mapa.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/client.dir/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno_Silva_-_Examen/multi/libreria/ncurses/ncurses.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/client.dir/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno_Silva_-_Examen/multi/libreria/tank/tank.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/client.dir/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno_Silva_-_Examen/multi/libreria/teclas/teclas.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/client.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/client.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/feature_tests.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/feature_tests.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/feature_tests.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/client" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/build/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/cliente/client.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../multi/cliente/client.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/libreria/bullet/bullet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../multi/libreria/bullet/bullet.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/servidor/build/CMakeFiles/server.dir/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno_Silva_-_Examen/multi/libreria/bullet/bullet.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../multi/servidor/build/CMakeFiles/server.dir/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno_Silva_-_Examen/multi/libreria/bullet/bullet.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/servidor/build/CMakeFiles/server.dir/server.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../multi/servidor/build/CMakeFiles/server.dir/server.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/servidor/build/server" beforeDir="false" afterPath="$PROJECT_DIR$/../multi/servidor/build/server" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multi/servidor/server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../multi/servidor/server.cpp" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cliente/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FUSProjectUsageTrigger">
+    <session id="1394545605">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="Makefile" value="1" />
+          <entry key="cmake" value="1" />
+          <entry key="cpp" value="1" />
+          <entry key="txt" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CMakeLists.txt" value="2" />
+          <entry key="ObjectiveC" value="1" />
+          <entry key="PLAIN_TEXT" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="txt" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CMakeLists.txt" value="5" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cliente/example.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cliente/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cliente/Makefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/cliente/example.cpp" />
+        <option value="$PROJECT_DIR$/cliente/build2/CMakeFiles/Makefile.cmake" />
+        <option value="$PROJECT_DIR$/cliente/CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="27" />
+    <option name="width" value="1270" />
+    <option name="height" value="892" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cmake prueba" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cmake prueba" type="462c0819:PsiDirectoryNode" />
+              <item name="cliente" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cmake prueba" type="462c0819:PsiDirectoryNode" />
+              <item name="cliente" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cmake prueba" type="462c0819:PsiDirectoryNode" />
+              <item name="cliente" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+              <item name="CMakeFiles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cmake prueba" type="462c0819:PsiDirectoryNode" />
+              <item name="cliente" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+              <item name="CMakeFiles" type="462c0819:PsiDirectoryNode" />
+              <item name="example.dir" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cmake prueba" type="462c0819:PsiDirectoryNode" />
+              <item name="cliente" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+              <item name="CMakeFiles" type="462c0819:PsiDirectoryNode" />
+              <item name="example.dir" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cmake prueba" type="462c0819:PsiDirectoryNode" />
+              <item name="cliente" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+              <item name="CMakeFiles" type="462c0819:PsiDirectoryNode" />
+              <item name="example.dir" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="bruno" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cmake prueba" type="462c0819:PsiDirectoryNode" />
+              <item name="cliente" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+              <item name="CMakeFiles" type="462c0819:PsiDirectoryNode" />
+              <item name="example.dir" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="bruno" type="462c0819:PsiDirectoryNode" />
+              <item name="Documentos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cmake prueba" type="462c0819:PsiDirectoryNode" />
+              <item name="cliente" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+              <item name="CMakeFiles" type="462c0819:PsiDirectoryNode" />
+              <item name="example.dir" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="bruno" type="462c0819:PsiDirectoryNode" />
+              <item name="Documentos" type="462c0819:PsiDirectoryNode" />
+              <item name="DAM-2018" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cmake prueba" type="462c0819:PsiDirectoryNode" />
+              <item name="cliente" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+              <item name="CMakeFiles" type="462c0819:PsiDirectoryNode" />
+              <item name="example.dir" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="bruno" type="462c0819:PsiDirectoryNode" />
+              <item name="Documentos" type="462c0819:PsiDirectoryNode" />
+              <item name="DAM-2018" type="462c0819:PsiDirectoryNode" />
+              <item name="PServicios_Y_Procesos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cmake prueba" type="462c0819:PsiDirectoryNode" />
+              <item name="cliente" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+              <item name="CMakeFiles" type="462c0819:PsiDirectoryNode" />
+              <item name="example.dir" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="bruno" type="462c0819:PsiDirectoryNode" />
+              <item name="Documentos" type="462c0819:PsiDirectoryNode" />
+              <item name="DAM-2018" type="462c0819:PsiDirectoryNode" />
+              <item name="PServicios_Y_Procesos" type="462c0819:PsiDirectoryNode" />
+              <item name="Bruno_Silva_-_Examen" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cmake prueba" type="462c0819:PsiDirectoryNode" />
+              <item name="cliente" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+              <item name="CMakeFiles" type="462c0819:PsiDirectoryNode" />
+              <item name="example.dir" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="bruno" type="462c0819:PsiDirectoryNode" />
+              <item name="Documentos" type="462c0819:PsiDirectoryNode" />
+              <item name="DAM-2018" type="462c0819:PsiDirectoryNode" />
+              <item name="PServicios_Y_Procesos" type="462c0819:PsiDirectoryNode" />
+              <item name="Bruno_Silva_-_Examen" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake_prueba" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cmake prueba" type="462c0819:PsiDirectoryNode" />
+              <item name="cliente" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+              <item name="CMakeFiles" type="462c0819:PsiDirectoryNode" />
+              <item name="example.dir" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="bruno" type="462c0819:PsiDirectoryNode" />
+              <item name="Documentos" type="462c0819:PsiDirectoryNode" />
+              <item name="DAM-2018" type="462c0819:PsiDirectoryNode" />
+              <item name="PServicios_Y_Procesos" type="462c0819:PsiDirectoryNode" />
+              <item name="Bruno_Silva_-_Examen" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake_prueba" type="462c0819:PsiDirectoryNode" />
+              <item name="libreria" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cmake prueba" type="462c0819:PsiDirectoryNode" />
+              <item name="cliente" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+              <item name="CMakeFiles" type="462c0819:PsiDirectoryNode" />
+              <item name="example.dir" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="bruno" type="462c0819:PsiDirectoryNode" />
+              <item name="Documentos" type="462c0819:PsiDirectoryNode" />
+              <item name="DAM-2018" type="462c0819:PsiDirectoryNode" />
+              <item name="PServicios_Y_Procesos" type="462c0819:PsiDirectoryNode" />
+              <item name="Bruno_Silva_-_Examen" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake_prueba" type="462c0819:PsiDirectoryNode" />
+              <item name="libreria" type="462c0819:PsiDirectoryNode" />
+              <item name="framebuffer" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../multi" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.example">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="example" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="example" TARGET_NAME="example" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="example" RUN_TARGET_NAME="example">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Build All" />
+      <item itemvalue="Application.example" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f91b7277-5a41-4f10-b262-bc74eda63086" name="Default Changelist" comment="" />
+      <created>1546564643906</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1546564643906</updated>
+      <workItem from="1546564645414" duration="1806000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1806000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="25" width="1280" height="894" extended-state="6" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.47082657" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="CMake" weight="0.32984293" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" weight="0.32984293" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32984293" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32984293" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32984293" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32984293" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/cliente/example.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cliente/build2/CMakeFiles/Makefile.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cliente/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cliente/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

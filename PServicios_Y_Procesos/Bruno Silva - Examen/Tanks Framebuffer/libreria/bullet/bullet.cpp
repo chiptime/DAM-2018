@@ -1,0 +1,106 @@
+//
+// Created by bruno on 15/06/18.
+//
+#include "bullet.h"
+
+
+void tankToBullet(struct Tanks atank, struct Bullets *bullet) {
+    bullet->position.x = atank.position.x;
+    bullet->position.y = atank.position.y;
+}
+void moveBullet(struct Bullets *position_Bullet, int checkDirection) {
+    if (position_Bullet->position.x < 720 && position_Bullet->position.x > 40 &&
+            position_Bullet->position.y > 40 && position_Bullet->position.y < 520) {
+
+        if (checkDirection == 1)
+            position_Bullet->position.y = position_Bullet->position.y - 10;
+
+        if (checkDirection == 2)
+            position_Bullet->position.x = position_Bullet->position.x - 10;
+
+        if (checkDirection == 3)
+            position_Bullet->position.y = position_Bullet->position.y + 10;
+
+        if (checkDirection == 4)
+            position_Bullet->position.x = position_Bullet->position.x + 10;
+    }//else with code for explosion new struct "whereBulletDied"
+}
+void crashBullet(Client *c){
+    for(int i = 0; i < MAX_CLIENTS; i++){
+        if(!c->tank[i].die)
+            for(int r = 0; r < MAX_CLIENTS; r++)
+                for(int col = 0; col < MAX_CLIENTS; col++)
+                    if(     c->tank[r].position.x 	<= c->tank[col].balas.position.x &&
+                            c->tank[r].position.x + 100/2 >= c->tank[col].balas.position.x &&
+                            c->tank[r].position.y 	<= c->tank[col].balas.position.y &&
+                            c->tank[r].position.y + 96/2  >= c->tank[col].balas.position.y
+                      ){
+                        c->tank[r].whereDied.x = c->tank[r].position.x;
+                        c->tank[r].whereDied.y = c->tank[r].position.y;
+                        c->tank[r].position.x = 0;
+                        c->tank[r].position.y = 0;
+                        c->tank[col].balas.position.x = 900;
+                        c->tank[col].balas.position.y = 900;
+                        c->tank[r].die = 1;
+                        c->tank[col].kills++;
+                        printf("Tank %i: is died %i\n",r,c->tank[r].die);
+                        return;
+                    }
+        c->tank[i].die = 0;
+        c->tank[i].whereDied.x = 900;
+        c->tank[i].whereDied.y = 900;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+   void printBullet(struct Tanks tbullet, struct Bullets *position){
+
+   struct Bullets position_Bullet;
+
+   mvprintw(position_Bullet.position.y,position_Bullet.position.y, "*");
+   DEBUG(40,70, "La direccion a la que mira es %i",checkDirection);
+
+   if(position_Bullet.position.x<40 && position_Bullet.position.x>1 && position_Bullet.position.y>1 && position_Bullet.position.y<25){
+   if(checkDirection == 1)
+   position->position.x--;
+
+   if(checkDirection == 2)
+   position->position.y--;
+
+   if(checkDirection == 3)
+   position->position.y++;
+
+   if(checkDirection == 4)
+   position->position.x++;
+   }
+   else{
+   mvprintw(position_Bullet.position.y,position_Bullet.position.x, " ");
+   }
+   DEBUG(20,60,"La posicion Y = %lf,La posicion X = %lf",position_Bullet.position.y,position_Bullet.position.x);
+   refresh();
+   }
+   */

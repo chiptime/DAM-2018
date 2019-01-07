@@ -1,0 +1,54 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/cliente/example.cpp
+stdio.h
+-
+termios.h
+-
+string.h
+-
+../libreria/framebuffer/png.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/framebuffer/png.h
+../libreria/framebuffer/sprite_render.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/framebuffer/sprite_render.h
+example.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/cliente/example.h
+
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/cliente/example.h
+
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/framebuffer/png.cpp
+unistd.h
+-
+png.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/framebuffer/png.h
+
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/framebuffer/png.h
+stdlib.h
+-
+png.h
+-
+
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/framebuffer/sprite_render.cpp
+sprite_render.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/framebuffer/sprite_render.h
+
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/framebuffer/sprite_render.h
+sys/ioctl.h
+-
+linux/fb.h
+-
+fcntl.h
+-
+sys/mman.h
+-
+unistd.h
+-
+png.h
+/home/bruno/Documentos/DAM-2018/PServicios_Y_Procesos/Bruno Silva - Examen/multi/libreria/framebuffer/png.h
+
